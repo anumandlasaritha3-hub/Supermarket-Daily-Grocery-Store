@@ -1,0 +1,99 @@
+/* ==========================================
+   DELIVERY INFO PAGE  (delivery.css)
+   Colours, fonts, buttons come from nav.css (light + body.dark)
+========================================== */
+.dk-sv{font-family:var(--font-family);background:var(--bg);color:var(--text);overflow-x:clip}
+.dk-sv *,.dk-sv *::before,.dk-sv *::after{box-sizing:border-box}
+.dk-sv-wrap{width:min(100% - 48px,1240px);margin-inline:auto}
+.dk-sv section{padding:96px 0;position:relative}
+.dk-sv-alt{background:var(--surface)}
+.dk-sv-label{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:var(--radius-pill);background:var(--soft);border:1px solid var(--border);color:var(--pink);font-size:12px;font-weight:var(--weight-semibold);letter-spacing:.4px;text-transform:uppercase}
+.dk-sv h1,.dk-sv-head h2{font-weight:var(--weight-extra);letter-spacing:-1.2px;line-height:1.12;margin:18px 0 14px}
+.dk-sv h1{font-size:clamp(36px,5vw,62px)}
+.dk-sv-head h2{font-size:clamp(28px,3.4vw,44px)}
+.dk-sv-head h2 span,.dk-sv-checker h2 span{background:var(--btn-primary-bg);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dk-sv-head{max-width:660px;margin:0 auto 52px;text-align:center}
+.dk-sv-head p,.dk-sv-lead,.dk-sv-muted{color:var(--muted)}
+.dk-sv-lead{font-size:18px;max-width:560px}
+.dk-sv-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.dk-sv .btn-primary{box-shadow:var(--shadow-button);border:0;transition:transform var(--transition-fast)}
+.dk-sv .btn-primary:hover{transform:translateY(-2px)}
+.dk-sv .btn-secondary{border:1px solid var(--btn-secondary-border)}
+.dk-sv-icon{width:52px;height:52px;display:grid;place-items:center;border-radius:var(--radius-md);background:var(--soft);color:var(--pink);font-size:23px;flex:none}
+.dk-sv-link{display:inline-flex;align-items:center;gap:6px;color:var(--pink);font-weight:var(--weight-semibold)}
+.dk-sv-link i{transition:transform var(--transition-fast)}.dk-sv-link:hover i{transform:translateX(5px)}
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+[data-reveal].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}}
+
+/* 1. BANNER */
+.dk-sv-banner{position:relative;padding:70px 0 130px!important;color:#fff;background:#2a1633 center/cover no-repeat;overflow:hidden}
+.dk-sv-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(35,15,45,.94) 25%,rgba(35,15,45,.55))}
+.dk-sv-banner .dk-sv-wrap{position:relative}
+.dk-sv-banner h1{color:#fff;margin-top:16px}.dk-sv-banner h1 span{color:#ffb3d4}
+.dk-sv-banner .dk-sv-lead{color:#e8d9ef}
+.dk-sv-crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;list-style:none;margin:0 0 30px;padding:0;font-size:14px;color:#e8d9ef}
+.dk-sv-crumbs a:hover{color:#fff}.dk-sv-crumbs [aria-current]{font-weight:var(--weight-semibold)}
+.dk-sv-banner .dk-sv-label{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
+.dk-sv-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.dk-sv-chips span{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:var(--radius-pill);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:13px;font-weight:var(--weight-medium)}
+.dk-sv-chips i{color:#ffb3d4}
+
+/* 2. PINCODE CHECKER */
+.dk-sv-checker{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:44px;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow-dropdown);margin-top:-60px;position:relative;z-index:2}
+.dk-sv-checker h2{font-size:clamp(24px,2.6vw,34px);font-weight:var(--weight-extra);letter-spacing:-.8px;margin:12px 0 8px}
+.dk-sv-form{display:flex;gap:10px}
+.dk-sv-form input{flex:1;min-width:0;padding:15px 20px;border-radius:var(--radius-pill);border:1px solid var(--border);background:var(--bg);color:var(--text);font:inherit;font-size:16px;letter-spacing:2px;outline:0;transition:.2s}
+.dk-sv-form input:focus{border-color:var(--pink);box-shadow:0 0 0 4px var(--soft)}
+.dk-sv-result{display:none;align-items:center;gap:10px;margin-top:16px;padding:14px 18px;border-radius:var(--radius-md);font-size:14.5px;font-weight:var(--weight-medium);background:var(--soft)}
+.dk-sv-result.ok{display:flex;border:1px solid var(--primary)}.dk-sv-result.ok i{color:#2e9e5b}
+.dk-sv-result.no{display:flex;border:1px solid var(--border)}.dk-sv-result.no i{color:var(--pink)}
+
+/* 3. CHARGES */
+.dk-sv-fees{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.dk-sv-fee{position:relative;display:flex;flex-direction:column;padding:32px 26px;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-xl);transition:.35s}
+.dk-sv-fee:hover{transform:translateY(-8px);box-shadow:var(--shadow-dropdown);border-color:var(--primary)}
+.dk-sv-fee.hot{border-color:var(--pink);box-shadow:var(--shadow-dropdown)}
+.dk-sv-fee.hot::before{content:"Most popular";position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:5px 14px;border-radius:var(--radius-pill);background:var(--btn-primary-bg);color:#fff;font-size:12px;font-weight:var(--weight-bold);white-space:nowrap}
+.dk-sv-fee h3{font-size:19px;margin:16px 0 4px}.dk-sv-fee .amt{font-size:30px;font-weight:var(--weight-extra);color:var(--pink);line-height:1.2}
+.dk-sv-fee small{color:var(--muted)}.dk-sv-fee ul{list-style:none;margin:18px 0 22px;padding:0;display:grid;gap:9px;flex:1;font-size:14px}
+.dk-sv-fee li{display:flex;gap:8px}.dk-sv-fee li i{color:var(--pink);margin-top:2px}
+
+/* 4. SLOTS + STEPS */
+.dk-sv-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:56px}
+.dk-sv-slot{padding:24px 18px;text-align:center;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-lg);transition:.3s}
+.dk-sv-slot:hover{border-color:var(--pink);transform:translateY(-4px)}
+.dk-sv-slot i{font-size:28px;color:var(--pink)}.dk-sv-slot strong{display:block;margin:10px 0 2px}.dk-sv-slot small{color:var(--muted)}
+.dk-sv-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative}
+.dk-sv-steps::before{content:"";position:absolute;top:36px;left:12%;right:12%;border-top:2px dashed var(--primary);opacity:.6}
+.dk-sv-step{position:relative;text-align:center}
+.dk-sv-step-num{position:relative;z-index:1;width:72px;height:72px;margin:0 auto 18px;display:grid;place-items:center;border-radius:50%;background:var(--btn-primary-bg);color:#fff;font-size:28px;box-shadow:var(--shadow-button);border:5px solid var(--surface)}
+.dk-sv-step h3{font-size:18px;margin-bottom:6px}.dk-sv-step p{color:var(--muted);font-size:14.5px;margin:0}
+.dk-sv-step em{display:inline-block;margin-bottom:8px;font-style:normal;font-size:12px;font-weight:var(--weight-bold);color:var(--pink);letter-spacing:1px}
+
+/* 5. POLICIES */
+.dk-sv-policy{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dk-sv-policy article{padding:30px 26px;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-xl);transition:.3s}
+.dk-sv-policy article:hover{transform:translateY(-6px);box-shadow:var(--shadow-dropdown)}
+.dk-sv-policy h3{font-size:18px;margin:16px 0 8px}.dk-sv-policy p{color:var(--muted);font-size:14.5px;margin:0}
+
+/* 6. COVERAGE */
+.dk-sv-areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:860px;margin:0 auto}
+.dk-sv-areas span{padding:10px 18px;border-radius:var(--radius-pill);background:var(--panel);border:1px solid var(--border);font-size:14px;font-weight:var(--weight-medium)}
+.dk-sv-areas i{color:var(--pink);margin-right:6px}
+
+/* CTA */
+.dk-sv-cta-box{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding:52px;border-radius:var(--radius-xl);background:linear-gradient(120deg,var(--plum),#8a4fa3);color:#fff;overflow:hidden}
+.dk-sv-cta-box h2{color:#fff;margin:0 0 12px;font-size:clamp(26px,3vw,40px);letter-spacing:-1px;font-weight:var(--weight-extra)}.dk-sv-cta-box h2 span{color:#ffb3d4}
+.dk-sv-cta-box p{color:#eadcf2}.dk-sv-cta-box img{width:100%;border-radius:var(--radius-lg);display:block}
+.dk-sv-cta-box .btn-secondary{background:#fff;color:var(--plum);border-color:#fff}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+ .dk-sv-checker,.dk-sv-cta-box{grid-template-columns:1fr}.dk-sv-checker{padding:30px}
+ .dk-sv-fees{grid-template-columns:repeat(2,1fr)}.dk-sv-slots{grid-template-columns:repeat(2,1fr)}
+ .dk-sv-steps{grid-template-columns:repeat(2,1fr);row-gap:40px}.dk-sv-steps::before{display:none}
+ .dk-sv-policy{grid-template-columns:1fr}}
+@media(max-width:640px){
+ .dk-sv section{padding:64px 0}.dk-sv-wrap{width:min(100% - 32px,1240px)}
+ .dk-sv-fees,.dk-sv-steps{grid-template-columns:1fr}.dk-sv-form{flex-direction:column}.dk-sv-checker{margin-top:-40px}.dk-sv-cta-box{padding:28px 22px}}

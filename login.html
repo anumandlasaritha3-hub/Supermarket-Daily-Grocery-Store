@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Login | DailyKart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+
+  <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+  <main class="auth-layout">
+
+    <!-- LEFT BRAND PANEL -->
+    <section class="auth-brand-panel">
+
+      <a href="index.html" class="auth-logo">
+        <img src="images/logo.png" alt="DailyKart logo">
+
+        <div>
+          <h2>Daily<span>Kart</span></h2>
+          <small>FRESH ESSENTIALS ✿ HAPPIER DAYS</small>
+        </div>
+      </a>
+
+      <div class="auth-brand-content">
+
+        <span class="auth-eyebrow">
+          <i class="bi bi-flower1"></i>
+          YOUR EVERYDAY GROCERY PARTNER
+        </span>
+
+        <h1>
+          Fresh starts.<br>
+          <span>Happy carts.</span>
+        </h1>
+
+        <p>
+          Welcome back to a simpler way of grocery shopping.
+          Save your favorites, create shopping lists and track
+          your deliveries from one convenient place.
+        </p>
+
+        <div class="auth-benefits">
+          <span>
+            <i class="bi bi-check-circle-fill"></i>
+            Fresh essentials
+          </span>
+
+          <span>
+            <i class="bi bi-check-circle-fill"></i>
+            Easy shopping
+          </span>
+
+          <span>
+            <i class="bi bi-check-circle-fill"></i>
+            Fast delivery
+          </span>
+        </div>
+
+      </div>
+
+      <p class="auth-brand-footer">
+        Fresh essentials. Happier days.
+      </p>
+
+    </section>
+
+    <!-- RIGHT LOGIN PANEL -->
+    <section class="auth-form-panel">
+
+      <div class="auth-topbar">
+
+        <div class="auth-controls">
+
+          <button
+            type="button"
+            id="authTheme"
+            aria-label="Switch theme"
+          >
+            <i class="bi bi-sun" id="authThemeIcon"></i>
+          </button>
+
+          <button
+            type="button"
+            id="authDirection"
+            aria-label="Switch direction"
+          >
+            RTL
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="auth-form-wrapper">
+
+        <div class="auth-form-icon">
+          <i class="bi bi-person-heart"></i>
+        </div>
+
+        <span class="auth-section-label">
+          WELCOME BACK
+        </span>
+
+        <h2>
+          Login to <span>DailyKart</span>
+        </h2>
+
+        <p class="auth-description">
+          Enter your account details to continue shopping.
+        </p>
+
+        <form id="loginForm" novalidate>
+
+          <!-- EMAIL -->
+          <div class="auth-field-group">
+
+            <label for="loginEmail">
+              Email address
+            </label>
+
+            <div class="auth-input-wrap">
+              <i class="bi bi-envelope"></i>
+
+              <input
+                type="email"
+                id="loginEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+            <small class="auth-error" id="loginEmailError"></small>
+
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="auth-field-group">
+
+            <div class="auth-label-row">
+              <label for="loginPassword">Password</label>
+
+              <a href="forgot-password.html">
+                Forgot password?
+              </a>
+            </div>
+
+            <div class="auth-input-wrap">
+              <i class="bi bi-lock"></i>
+
+              <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="auth-password-toggle"
+                data-toggle-password="loginPassword"
+                aria-label="Show password"
+              >
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+
+            <small class="auth-error" id="loginPasswordError"></small>
+
+          </div>
+
+          <label class="auth-remember">
+            <input type="checkbox" id="rememberEmail">
+            Remember my email
+          </label>
+
+          <button type="submit" class="auth-submit-btn">
+            Login to my account
+            <i class="bi bi-arrow-right"></i>
+          </button>
+
+          <p class="auth-status" id="loginStatus" role="status"></p>
+
+        </form>
+
+        <p class="auth-switch">
+          New to DailyKart?
+          <a href="signup.html">Create an account</a>
+        </p>
+
+        <div class="auth-form-footer">
+          <i class="bi bi-heart"></i>
+          Fresh essentials. Happier days.
+        </div>
+
+      </div>
+
+      <p class="auth-copyright">
+        &copy; <span data-year></span>
+        DailyKart. All rights reserved.
+      </p>
+
+    </section>
+
+  </main>
+
+  <script src="auth.js" defer></script>
+
+</body>
+</html>

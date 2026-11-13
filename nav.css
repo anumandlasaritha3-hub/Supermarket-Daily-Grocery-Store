@@ -1,0 +1,3828 @@
+/* ==========================================
+
+
+
+   DAILYKART - COMPLETE STYLESHEET
+
+
+
+========================================== */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+
+/* ==========================================
+
+
+
+   1. GLOBAL VARIABLES
+
+
+
+========================================== */
+
+
+
+:root {
+
+
+
+  /* BRAND COLORS */
+
+
+
+  --primary: #B8A2D6;
+
+
+
+  --secondary: #D9899E;
+
+
+
+  --pink: #ED4D91;
+
+
+
+  --plum: #4C345C;
+
+
+
+  --white: #FFFFFF;
+
+
+
+  /* LIGHT THEME */
+
+
+
+  --bg: #FFF5F7;
+
+
+
+  --surface: #FFF9FC;
+
+
+
+  --panel: #FFFFFF;
+
+
+
+  --text: #4C345C;
+
+
+
+  --muted: #806C8D;
+
+
+
+  --soft: #FCE1F2;
+
+
+
+  --border: #EED8EF;
+
+
+
+  --wave: #DCC2E8;
+
+
+
+  /* TYPOGRAPHY */
+
+
+
+  --font-family: 'Poppins', sans-serif;
+
+
+
+  --font-h1: 48px;
+
+
+
+  --font-h2: 36px;
+
+
+
+  --font-h3: 24px;
+
+
+
+  --font-h4: 20px;
+
+
+
+  --font-h5: 18px;
+
+
+
+  --font-h6: 15px;
+
+
+
+  --font-body: 16px;
+
+
+
+  --font-small: 14px;
+
+
+
+  --font-xs: 12px;
+
+
+
+  --font-nav: 14px;
+
+
+
+  --font-button: 14px;
+
+
+
+  --font-brand: 32px;
+
+
+
+  --font-tagline: 7px;
+
+
+
+  /* FONT WEIGHTS */
+
+
+
+  --weight-regular: 400;
+
+
+
+  --weight-medium: 500;
+
+
+
+  --weight-semibold: 600;
+
+
+
+  --weight-bold: 700;
+
+
+
+  --weight-extra: 800;
+
+
+
+  /* LINE HEIGHT */
+
+
+
+  --line-heading: 1.2;
+
+
+
+  --line-body: 1.7;
+
+
+
+  /* SPACING */
+
+
+
+  --space-xs: 4px;
+
+
+
+  --space-sm: 8px;
+
+
+
+  --space-md: 12px;
+
+
+
+  --space-lg: 16px;
+
+
+
+  --space-xl: 20px;
+
+
+
+  --space-2xl: 24px;
+
+
+
+  --space-3xl: 32px;
+
+
+
+  /* RADIUS */
+
+
+
+  --radius-sm: 8px;
+
+
+
+  --radius-md: 12px;
+
+
+
+  --radius-lg: 16px;
+
+
+
+  --radius-xl: 24px;
+
+
+
+  --radius-pill: 999px;
+
+
+
+  /* BUTTONS */
+
+
+
+  --btn-height: 44px;
+
+
+
+  --btn-padding-x: 22px;
+
+
+
+  --btn-primary-bg: linear-gradient(
+
+
+
+    120deg,
+
+
+
+    #ED4D91,
+
+
+
+    #D9899E
+
+
+
+  );
+
+
+
+  --btn-primary-text: #FFFFFF;
+
+
+
+  --btn-secondary-bg: var(--soft);
+
+
+
+  --btn-secondary-text: var(--text);
+
+
+
+  --btn-secondary-border: var(--primary);
+
+
+
+  /* THEME + RTL TOGGLE BUTTONS */
+
+
+
+  --toggle-bg: #FCE1F2;
+
+
+
+  --toggle-text: #4C345C;
+
+
+
+  --toggle-border: #B8A2D6;
+
+
+
+  --toggle-hover-bg: #F4E9FA;
+
+
+
+  --toggle-hover-text: #4C345C;
+
+
+
+  --toggle-hover-border: #D9899E;
+
+
+
+  --toggle-hover-shadow:
+
+
+
+    0 5px 16px rgba(184, 162, 214, 0.25);
+
+
+
+  --toggle-transition: 0.25s ease;
+
+
+
+  /* HEADER */
+
+
+
+  --header-height: 116px;
+
+
+
+  --header-padding-x: 3%;
+
+
+
+  --header-gap: 16px;
+
+
+
+  /* BRAND */
+
+
+
+  --logo-width: 92px;
+
+
+
+  --logo-height: 88px;
+
+
+
+  /* NAVIGATION */
+
+
+
+  --nav-gap: 18px;
+
+
+
+  --active-line-height: 3px;
+
+
+
+  /* SHADOWS */
+
+
+
+  --shadow-header:
+
+
+
+    0 8px 30px rgba(145, 67, 135, 0.12);
+
+
+
+  --shadow-dropdown:
+
+
+
+    0 12px 30px rgba(76, 52, 92, 0.13);
+
+
+
+  --shadow-button:
+
+
+
+    0 6px 18px rgba(217, 137, 158, 0.24);
+
+
+
+  /* TRANSITIONS */
+
+
+
+  --transition-fast: 0.2s ease;
+
+
+
+  --transition-normal: 0.3s ease;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   2. DARK THEME
+
+
+
+========================================== */
+
+
+
+body.dark {
+
+
+
+  --bg: #21182B;
+
+
+
+  --surface: #30203F;
+
+
+
+  --panel: #3C294D;
+
+
+
+  --text: #FFF5F7;
+
+
+
+  --muted: #CDB9D6;
+
+
+
+  --soft: #60375D;
+
+
+
+  --border: #754D88;
+
+
+
+  --wave: #76528E;
+
+
+
+  --btn-secondary-bg: #493158;
+
+
+
+  --btn-secondary-text: #FFF5F7;
+
+
+
+  --btn-secondary-border: #B8A2D6;
+
+
+
+  /* DARK TOGGLE COLORS */
+
+
+
+  --toggle-bg: #493158;
+
+
+
+  --toggle-text: #FFF5F7;
+
+
+
+  --toggle-border: #76528E;
+
+
+
+  --toggle-hover-bg: #583B69;
+
+
+
+  --toggle-hover-text: #FFFFFF;
+
+
+
+  --toggle-hover-border: #D9899E;
+
+
+
+  --toggle-hover-shadow:
+
+
+
+    0 5px 16px rgba(0, 0, 0, 0.2);
+
+
+
+  --shadow-header:
+
+
+
+    0 8px 30px rgba(0, 0, 0, 0.3);
+
+
+
+  --shadow-dropdown:
+
+
+
+    0 12px 30px rgba(0, 0, 0, 0.3);
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   3. GLOBAL RESET
+
+
+
+========================================== */
+
+
+
+*,
+
+
+
+*::before,
+
+
+
+*::after {
+
+
+
+  box-sizing: border-box;
+
+
+
+}
+
+
+
+html {
+
+
+
+  scroll-behavior: smooth;
+
+
+
+}
+
+
+
+body {
+
+
+
+  margin: 0;
+
+
+
+  padding: 0;
+
+
+
+  font-family: var(--font-family);
+
+
+
+  font-size: var(--font-body);
+
+
+
+  line-height: var(--line-body);
+
+
+
+  background: var(--bg);
+
+
+
+  color: var(--text);
+
+
+
+  transition:
+
+
+
+    background var(--transition-normal),
+
+
+
+    color var(--transition-normal);
+
+
+
+}
+
+
+
+a {
+
+
+
+  color: inherit;
+
+
+
+  text-decoration: none;
+
+
+
+}
+
+
+
+button,
+
+
+
+input,
+
+
+
+textarea,
+
+
+
+select {
+
+
+
+  font: inherit;
+
+
+
+}
+
+
+
+button {
+
+
+
+  cursor: pointer;
+
+
+
+}
+
+
+
+img {
+
+
+
+  max-width: 100%;
+
+
+
+}
+
+
+
+button:focus-visible,
+
+
+
+a:focus-visible {
+
+
+
+  outline: 3px solid var(--primary);
+
+
+
+  outline-offset: 3px;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   4. GLOBAL TYPOGRAPHY
+
+
+
+========================================== */
+
+
+
+h1,
+
+
+
+h2,
+
+
+
+h3,
+
+
+
+h4,
+
+
+
+h5,
+
+
+
+h6 {
+
+
+
+  margin: 0 0 var(--space-lg);
+
+
+
+  font-family: var(--font-family);
+
+
+
+  font-weight: var(--weight-bold);
+
+
+
+  line-height: var(--line-heading);
+
+
+
+  color: var(--text);
+
+
+
+}
+
+
+
+h1 {
+
+
+
+  font-size: var(--font-h1);
+
+
+
+}
+
+
+
+h2 {
+
+
+
+  font-size: var(--font-h2);
+
+
+
+}
+
+
+
+h3 {
+
+
+
+  font-size: var(--font-h3);
+
+
+
+}
+
+
+
+h4 {
+
+
+
+  font-size: var(--font-h4);
+
+
+
+}
+
+
+
+h5 {
+
+
+
+  font-size: var(--font-h5);
+
+
+
+}
+
+
+
+h6 {
+
+
+
+  font-size: var(--font-h6);
+
+
+
+}
+
+
+
+p {
+
+
+
+  margin: 0 0 var(--space-lg);
+
+
+
+  font-size: var(--font-body);
+
+
+
+  line-height: var(--line-body);
+
+
+
+}
+
+
+
+small,
+
+
+
+.text-small {
+
+
+
+  font-size: var(--font-small);
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   5. REUSABLE BUTTONS
+
+
+
+========================================== */
+
+
+
+.btn-primary,
+
+
+
+.btn-secondary {
+
+
+
+  min-height: var(--btn-height);
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 8px;
+
+
+
+  padding: 10px var(--btn-padding-x);
+
+
+
+  border-radius: var(--radius-pill);
+
+
+
+  font-size: var(--font-button);
+
+
+
+  font-weight: var(--weight-semibold);
+
+
+
+  line-height: 1.3;
+
+
+
+  white-space: nowrap;
+
+
+
+}
+
+
+
+/* PRIMARY BUTTON */
+
+
+
+.btn-primary {
+
+
+
+  border: 1px solid transparent;
+
+
+
+  background: var(--btn-primary-bg);
+
+
+
+  color: var(--btn-primary-text);
+
+
+
+  box-shadow: var(--shadow-button);
+
+
+
+  transition:
+
+
+
+    transform var(--transition-fast),
+
+
+
+    box-shadow var(--transition-fast);
+
+
+
+}
+
+
+
+.btn-primary:hover {
+
+
+
+  color: var(--btn-primary-text);
+
+
+
+  transform: translateY(-2px);
+
+
+
+  box-shadow:
+
+
+
+    0 10px 24px rgba(217, 137, 158, 0.32);
+
+
+
+}
+
+
+
+/* SECONDARY BUTTON */
+
+
+
+.btn-secondary {
+
+
+
+  border: 1px solid var(--btn-secondary-border);
+
+
+
+  background: var(--btn-secondary-bg);
+
+
+
+  color: var(--btn-secondary-text);
+
+
+
+  box-shadow: none;
+
+
+
+  transform: none;
+
+
+
+  transition: none;
+
+
+
+}
+
+
+
+/* NO HOVER EFFECT FOR GENERIC SECONDARY BUTTONS */
+
+
+
+.btn-secondary:hover {
+
+
+
+  border-color: var(--btn-secondary-border);
+
+
+
+  background: var(--btn-secondary-bg);
+
+
+
+  color: var(--btn-secondary-text);
+
+
+
+  box-shadow: none;
+
+
+
+  transform: none;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   6. HEADER
+
+
+
+========================================== */
+
+
+
+.header {
+
+
+
+  position: sticky;
+
+
+
+  top: 0;
+
+
+
+  isolation: isolate;
+
+
+
+  z-index: 1000;
+
+
+
+  width: 100%;
+
+
+
+  min-height: var(--header-height);
+
+
+
+  background: var(--surface);
+
+
+
+  border-bottom: 1px solid var(--border);
+
+
+
+  border-radius: 0 0 28px 28px;
+
+
+
+  box-shadow: var(--shadow-header);
+
+
+
+}
+
+
+
+.header-content {
+
+
+
+  position: relative;
+
+
+
+  z-index: 2;
+
+
+
+  width: 100%;
+
+
+
+  min-height: var(--header-height);
+
+
+
+  padding: 10px var(--header-padding-x);
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: space-between;
+
+
+
+  gap: var(--header-gap);
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   7. BRAND
+
+
+
+========================================== */
+
+
+
+.brand {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 8px;
+
+
+
+  flex-shrink: 0;
+
+
+
+  min-width: 0;
+
+
+
+}
+
+
+
+.brand-logo {
+
+
+
+  display: block;
+
+
+
+  width: var(--logo-width);
+
+
+
+  height: var(--logo-height);
+
+
+
+  max-width: none;
+
+
+
+  object-fit: contain;
+
+
+
+  flex-shrink: 0;
+
+
+
+}
+
+
+
+.brand-details {
+
+
+
+  display: flex;
+
+
+
+  flex-direction: column;
+
+
+
+  justify-content: center;
+
+
+
+  min-width: 0;
+
+
+
+}
+
+
+
+.brand-name {
+
+
+
+  font-size: var(--font-brand);
+
+
+
+  font-weight: var(--weight-extra);
+
+
+
+  line-height: 1.1;
+
+
+
+  letter-spacing: -1.4px;
+
+
+
+  white-space: nowrap;
+
+
+
+  color: var(--text);
+
+
+
+}
+
+
+
+.brand-name span {
+
+
+
+  color: var(--pink);
+
+
+
+}
+
+
+
+.brand-flower {
+
+
+
+  margin-left: 3px;
+
+
+
+  font-size: 14px;
+
+
+
+  color: var(--pink);
+
+
+
+  vertical-align: top;
+
+
+
+}
+
+
+
+.brand-tagline {
+
+
+
+  margin: 6px 0 0;
+
+
+
+  font-size: var(--font-tagline);
+
+
+
+  font-weight: var(--weight-bold);
+
+
+
+  letter-spacing: 0.8px;
+
+
+
+  line-height: 1.5;
+
+
+
+  white-space: nowrap;
+
+
+
+  color: var(--text);
+
+
+
+}
+
+
+
+.brand-tagline span {
+
+
+
+  color: var(--pink);
+
+
+
+  padding: 0 3px;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   8. NAVIGATION
+
+
+
+========================================== */
+
+
+
+.navigation {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: var(--nav-gap);
+
+
+
+  min-width: 0;
+
+
+
+}
+
+
+
+.navigation > a {
+
+
+
+  position: relative;
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  padding: 12px 0;
+
+
+
+  font-size: var(--font-nav);
+
+
+
+  font-weight: var(--weight-semibold);
+
+
+
+  white-space: nowrap;
+
+
+
+  color: var(--text);
+
+
+
+  transition: color var(--transition-fast);
+
+
+
+}
+
+
+
+.navigation > a::after {
+
+
+
+  content: "";
+
+
+
+  position: absolute;
+
+
+
+  bottom: 4px;
+
+
+
+  inset-inline-start: 0;
+
+
+
+  width: 0;
+
+
+
+  height: var(--active-line-height);
+
+
+
+  background: var(--pink);
+
+
+
+  border-radius: var(--radius-pill);
+
+
+
+  transition: width var(--transition-fast);
+
+
+
+}
+
+
+
+.navigation > a.active,
+
+
+
+.navigation > a[aria-current="page"] {
+
+
+
+  color: var(--pink);
+
+
+
+}
+
+
+
+.navigation > a.active::after,
+
+
+
+.navigation > a[aria-current="page"]::after {
+
+
+
+  width: 100%;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   9. HOME DROPDOWN
+
+
+
+========================================== */
+
+
+
+.dropdown {
+
+
+
+  position: relative;
+
+
+
+  flex-shrink: 0;
+
+
+
+}
+
+
+
+.home-btn {
+
+
+
+  position: relative;
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 10px;
+
+
+
+  padding: 12px 17px;
+
+
+
+  border: 1px solid transparent;
+
+
+
+  border-radius: var(--radius-lg);
+
+
+
+  background: var(--soft);
+
+
+
+  color: var(--pink);
+
+
+
+  font-size: var(--font-nav);
+
+
+
+  font-weight: var(--weight-semibold);
+
+
+
+  transition: none;
+
+
+
+}
+
+
+
+.home-btn.active,
+
+
+
+.home-btn[aria-current="page"] {
+
+
+
+  box-shadow: none;
+
+
+
+}
+
+
+
+.home-btn .bi-chevron-down {
+
+
+
+  font-size: 12px;
+
+
+
+  transition: transform var(--transition-fast);
+
+
+
+}
+
+
+
+.dropdown.open .bi-chevron-down {
+
+
+
+  transform: rotate(180deg);
+
+
+
+}
+
+
+
+.dropdown-menu {
+
+
+
+  display: none;
+
+
+
+  position: absolute;
+
+
+
+  top: calc(100% + 8px);
+
+
+
+  inset-inline-start: 0;
+
+
+
+  width: 210px;
+
+
+
+  padding: 8px;
+
+
+
+  background: var(--panel);
+
+
+
+  border: 1px solid var(--border);
+
+
+
+  border-radius: var(--radius-lg);
+
+
+
+  box-shadow: var(--shadow-dropdown);
+
+
+
+}
+
+
+
+.dropdown.open .dropdown-menu {
+
+
+
+  display: block;
+
+
+
+}
+
+
+
+.dropdown-menu a {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 10px;
+
+
+
+  padding: 9px;
+
+
+
+  border-radius: var(--radius-md);
+
+
+
+  font-size: var(--font-small);
+
+
+
+  font-weight: var(--weight-medium);
+
+
+
+  color: var(--text);
+
+
+
+  transition:
+
+
+
+    background var(--transition-fast),
+
+
+
+    color var(--transition-fast);
+
+
+
+}
+
+
+
+.dropdown-menu a:hover,
+
+
+
+.dropdown-menu a.active,
+
+
+
+.dropdown-menu a[aria-current="page"] {
+
+
+
+  background: var(--soft);
+
+
+
+  color: var(--pink);
+
+
+
+}
+
+
+
+.dropdown-icon {
+
+
+
+  width: 34px;
+
+
+
+  height: 34px;
+
+
+
+  display: grid;
+
+
+
+  place-items: center;
+
+
+
+  flex-shrink: 0;
+
+
+
+  border-radius: 10px;
+
+
+
+  background: var(--soft);
+
+
+
+  color: var(--pink);
+
+
+
+}
+
+
+
+.dropdown-icon i {
+
+
+
+  font-size: 18px;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   10. HEADER ACTIONS
+
+
+
+========================================== */
+
+
+
+.actions {
+
+
+
+  display: flex;
+
+
+
+  align-items: center;
+
+
+
+  gap: 10px;
+
+
+
+  flex-shrink: 0;
+
+
+
+  padding-inline-start: 16px;
+
+
+
+  border-inline-start: 1px solid var(--border);
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   11. THEME BUTTON - IMPROVED HOVER
+
+
+
+========================================== */
+
+
+
+.theme-btn {
+
+
+
+  width: var(--btn-height);
+
+
+
+  height: var(--btn-height);
+
+
+
+  display: grid;
+
+
+
+  place-items: center;
+
+
+
+  padding: 0;
+
+
+
+  border: 1px solid var(--toggle-border);
+
+
+
+  border-radius: 50%;
+
+
+
+  background: var(--toggle-bg);
+
+
+
+  color: var(--toggle-text);
+
+
+
+  font-size: 20px;
+
+
+
+  box-shadow: none;
+
+
+
+  transform: translateY(0);
+
+
+
+  transition:
+
+
+
+    background var(--toggle-transition),
+
+
+
+    border-color var(--toggle-transition),
+
+
+
+    color var(--toggle-transition),
+
+
+
+    box-shadow var(--toggle-transition),
+
+
+
+    transform var(--toggle-transition);
+
+
+
+}
+
+
+
+/* SOFT HOVER EFFECT */
+
+
+
+.theme-btn:hover {
+
+
+
+  background: var(--toggle-hover-bg);
+
+
+
+  color: var(--toggle-hover-text);
+
+
+
+  border-color: var(--toggle-hover-border);
+
+
+
+  box-shadow: var(--toggle-hover-shadow);
+
+
+
+  transform: translateY(-2px);
+
+
+
+}
+
+
+
+/* ACTIVE DARK MODE INDICATOR */
+
+
+
+body.dark .theme-btn {
+
+
+
+  border-bottom: 3px solid var(--pink);
+
+
+
+}
+
+
+
+/* PRESS EFFECT */
+
+
+
+.theme-btn:active {
+
+
+
+  transform: translateY(0);
+
+
+
+  box-shadow: none;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   12. RTL / LTR BUTTON - IMPROVED HOVER
+
+
+
+========================================== */
+
+
+
+.rtl-btn {
+
+
+
+  min-height: var(--btn-height);
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 8px;
+
+
+
+  padding: 10px 15px;
+
+
+
+  border: 1px solid var(--toggle-border);
+
+
+
+  border-radius: var(--radius-pill);
+
+
+
+  background: var(--toggle-bg);
+
+
+
+  color: var(--toggle-text);
+
+
+
+  font-size: var(--font-button);
+
+
+
+  font-weight: var(--weight-semibold);
+
+
+
+  white-space: nowrap;
+
+
+
+  box-shadow: none;
+
+
+
+  transform: translateY(0);
+
+
+
+  transition:
+
+
+
+    background var(--toggle-transition),
+
+
+
+    border-color var(--toggle-transition),
+
+
+
+    color var(--toggle-transition),
+
+
+
+    box-shadow var(--toggle-transition),
+
+
+
+    transform var(--toggle-transition);
+
+
+
+}
+
+
+
+.rtl-btn i {
+
+
+
+  font-size: 17px;
+
+
+
+}
+
+
+
+/* SOFT HOVER EFFECT */
+
+
+
+.rtl-btn:hover {
+
+
+
+  background: var(--toggle-hover-bg);
+
+
+
+  color: var(--toggle-hover-text);
+
+
+
+  border-color: var(--toggle-hover-border);
+
+
+
+  box-shadow: var(--toggle-hover-shadow);
+
+
+
+  transform: translateY(-2px);
+
+
+
+}
+
+
+
+/* ACTIVE RTL INDICATOR */
+
+
+
+html[dir="rtl"] .rtl-btn {
+
+
+
+  border-bottom: 3px solid var(--pink);
+
+
+
+}
+
+
+
+/* PRESS EFFECT */
+
+
+
+.rtl-btn:active {
+
+
+
+  transform: translateY(0);
+
+
+
+  box-shadow: none;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   13. LOGIN - PRIMARY BUTTON
+
+
+
+========================================== */
+
+
+
+.login-btn {
+
+
+
+  min-height: var(--btn-height);
+
+
+
+  display: inline-flex;
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  gap: 8px;
+
+
+
+  padding: 10px var(--btn-padding-x);
+
+
+
+  border: 1px solid transparent;
+
+
+
+  border-radius: var(--radius-pill);
+
+
+
+  background: var(--btn-primary-bg);
+
+
+
+  color: var(--btn-primary-text);
+
+
+
+  font-size: var(--font-button);
+
+
+
+  font-weight: var(--weight-semibold);
+
+
+
+  white-space: nowrap;
+
+
+
+  box-shadow: var(--shadow-button);
+
+
+
+  transition:
+
+
+
+    transform var(--transition-fast),
+
+
+
+    box-shadow var(--transition-fast);
+
+
+
+}
+
+
+
+.login-btn i {
+
+
+
+  font-size: 18px;
+
+
+
+}
+
+
+
+.login-btn:hover {
+
+
+
+  color: var(--btn-primary-text);
+
+
+
+  transform: translateY(-2px);
+
+
+
+  box-shadow:
+
+
+
+    0 10px 24px rgba(217, 137, 158, 0.32);
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   14. MOBILE MENU BUTTON
+
+
+
+========================================== */
+
+
+
+.menu-btn {
+
+
+
+  display: none;
+
+
+
+  width: var(--btn-height);
+
+
+
+  height: var(--btn-height);
+
+
+
+  align-items: center;
+
+
+
+  justify-content: center;
+
+
+
+  padding: 0;
+
+
+
+  border: 1px solid var(--btn-secondary-border);
+
+
+
+  border-radius: var(--radius-md);
+
+
+
+  background: var(--btn-secondary-bg);
+
+
+
+  color: var(--btn-secondary-text);
+
+
+
+  font-size: 23px;
+
+
+
+  box-shadow: none;
+
+
+
+  transition: none;
+
+
+
+}
+
+
+
+.menu-btn:hover {
+
+
+
+  background: var(--btn-secondary-bg);
+
+
+
+  color: var(--btn-secondary-text);
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   15. DECORATIVE CORNERS
+
+
+
+========================================== */
+
+
+
+.corner {
+
+
+
+  position: absolute;
+
+
+
+  bottom: 0;
+
+
+
+  z-index: 0;
+
+
+
+  width: 150px;
+
+
+
+  height: 55px;
+
+
+
+  pointer-events: none;
+
+
+
+  opacity: 0.7;
+
+
+
+}
+
+
+
+.corner-left {
+
+
+
+  left: 0;
+
+
+
+  border-bottom-left-radius: 28px;
+
+
+
+  background: linear-gradient(
+
+
+
+    25deg,
+
+
+
+    var(--wave) 0 32%,
+
+
+
+    transparent 33%
+
+
+
+  );
+
+
+
+}
+
+
+
+.corner-right {
+
+
+
+  right: 0;
+
+
+
+  border-bottom-right-radius: 28px;
+
+
+
+  background: linear-gradient(
+
+
+
+    -25deg,
+
+
+
+    var(--wave) 0 32%,
+
+
+
+    transparent 33%
+
+
+
+  );
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   16. SMALL DESKTOP
+
+
+
+========================================== */
+
+
+
+@media (max-width: 1450px) {
+
+
+
+  :root {
+
+
+
+    --header-padding-x: 2%;
+
+
+
+    --header-gap: 12px;
+
+
+
+    --logo-width: 74px;
+
+
+
+    --logo-height: 74px;
+
+
+
+    --font-brand: 26px;
+
+
+
+    --font-tagline: 6px;
+
+
+
+    --font-nav: 13px;
+
+
+
+    --nav-gap: 12px;
+
+
+
+    --btn-height: 40px;
+
+
+
+  }
+
+
+
+  .brand-tagline {
+
+
+
+    letter-spacing: 0.4px;
+
+
+
+  }
+
+
+
+  .home-btn {
+
+
+
+    padding: 10px 14px;
+
+
+
+  }
+
+
+
+  .actions {
+
+
+
+    gap: 7px;
+
+
+
+    padding-inline-start: 12px;
+
+
+
+  }
+
+
+
+  .rtl-btn {
+
+
+
+    padding: 9px 12px;
+
+
+
+    font-size: 12px;
+
+
+
+  }
+
+
+
+  .login-btn {
+
+
+
+    padding: 9px 16px;
+
+
+
+    font-size: 13px;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   17. TABLET / MOBILE NAVIGATION
+
+
+
+========================================== */
+
+
+
+@media (max-width: 1100px) {
+
+
+
+  :root {
+
+
+
+    --header-height: 88px;
+
+
+
+    --logo-width: 68px;
+
+
+
+    --logo-height: 68px;
+
+
+
+    --font-brand: 24px;
+
+
+
+  }
+
+
+
+  .header-content {
+
+
+
+    flex-wrap: wrap;
+
+
+
+    padding: 10px 20px;
+
+
+
+  }
+
+
+
+  .menu-btn {
+
+
+
+    display: flex;
+
+
+
+  }
+
+
+
+  .navigation {
+
+
+
+    display: none;
+
+
+
+    order: 3;
+
+
+
+    width: 100%;
+
+
+
+    flex-direction: column;
+
+
+
+    align-items: stretch;
+
+
+
+    gap: 4px;
+
+
+
+    padding: 12px 0;
+
+
+
+    border-top: 1px solid var(--border);
+
+
+
+  }
+
+
+
+  .navigation.show {
+
+
+
+    display: flex;
+
+
+
+  }
+
+
+
+  .navigation > a {
+
+
+
+    padding: 12px 14px;
+
+
+
+    font-size: 14px;
+
+
+
+  }
+
+
+
+  .navigation > a::after {
+
+
+
+    bottom: 4px;
+
+
+
+    inset-inline-start: 14px;
+
+
+
+  }
+
+
+
+  .navigation > a.active::after,
+
+
+
+  .navigation > a[aria-current="page"]::after {
+
+
+
+    width: 45px;
+
+
+
+  }
+
+
+
+  .home-btn {
+
+
+
+    width: 100%;
+
+
+
+    justify-content: space-between;
+
+
+
+    padding: 12px 14px;
+
+
+
+  }
+
+
+
+  .dropdown-menu {
+
+
+
+    position: static;
+
+
+
+    width: 100%;
+
+
+
+    margin-top: 6px;
+
+
+
+    box-shadow: none;
+
+
+
+  }
+
+
+
+  .actions {
+
+
+
+    margin-inline-start: auto;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   18. MOBILE
+
+
+
+========================================== */
+
+
+
+@media (max-width: 600px) {
+
+
+
+  :root {
+
+
+
+    --font-h1: 32px;
+
+
+
+    --font-h2: 26px;
+
+
+
+    --font-h3: 22px;
+
+
+
+    --font-h4: 20px;
+
+
+
+    --font-h5: 18px;
+
+
+
+    --font-h6: 16px;
+
+
+
+    --font-body: 14px;
+
+
+
+    --font-small: 12px;
+
+
+
+    --font-button: 11px;
+
+
+
+    --header-height: 70px;
+
+
+
+    --logo-width: 45px;
+
+
+
+    --logo-height: 48px;
+
+
+
+    --font-brand: 19px;
+
+
+
+    --font-tagline: 5px;
+
+
+
+    --btn-height: 34px;
+
+
+
+  }
+
+
+
+  .header {
+
+
+
+    border-radius: 0 0 20px 20px;
+
+
+
+  }
+
+
+
+  .header-content {
+
+
+
+    padding: 10px;
+
+
+
+    gap: 7px;
+
+
+
+  }
+
+
+
+  .brand {
+
+
+
+    gap: 4px;
+
+
+
+  }
+
+
+
+  .brand-name {
+
+
+
+    letter-spacing: -0.8px;
+
+
+
+  }
+
+
+
+  .brand-tagline {
+
+
+
+    margin-top: 3px;
+
+
+
+    letter-spacing: 0;
+
+
+
+  }
+
+
+
+  .brand-flower {
+
+
+
+    display: none;
+
+
+
+  }
+
+
+
+  .actions {
+
+
+
+    gap: 5px;
+
+
+
+    padding-inline-start: 0;
+
+
+
+    border: none;
+
+
+
+  }
+
+
+
+  .theme-btn {
+
+
+
+    font-size: 17px;
+
+
+
+  }
+
+
+
+  .rtl-btn {
+
+
+
+    padding: 7px 9px;
+
+
+
+    gap: 4px;
+
+
+
+  }
+
+
+
+  .rtl-btn i {
+
+
+
+    font-size: 14px;
+
+
+
+  }
+
+
+
+  .login-btn {
+
+
+
+    padding: 8px 10px;
+
+
+
+    gap: 5px;
+
+
+
+  }
+
+
+
+  .login-btn i {
+
+
+
+    font-size: 14px;
+
+
+
+  }
+
+
+
+  .menu-btn {
+
+
+
+    font-size: 19px;
+
+
+
+  }
+
+
+
+  .corner {
+
+
+
+    width: 85px;
+
+
+
+    height: 35px;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   19. SMALL MOBILE
+
+
+
+========================================== */
+
+
+
+@media (max-width: 420px) {
+
+
+
+  :root {
+
+
+
+    --logo-width: 38px;
+
+
+
+    --logo-height: 42px;
+
+
+
+    --font-brand: 17px;
+
+
+
+  }
+
+
+
+  .header-content {
+
+
+
+    padding: 9px 8px;
+
+
+
+    gap: 5px;
+
+
+
+  }
+
+
+
+  .brand-tagline {
+
+
+
+    display: none;
+
+
+
+  }
+
+
+
+  .actions {
+
+
+
+    gap: 4px;
+
+
+
+  }
+
+
+
+  .rtl-btn {
+
+
+
+    padding: 7px;
+
+
+
+  }
+
+
+
+  .login-btn {
+
+
+
+    padding: 8px;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   20. EXTRA SMALL SCREENS
+
+
+
+========================================== */
+
+
+
+@media (max-width: 350px) {
+
+
+
+  .brand {
+
+
+
+    width: 100%;
+
+
+
+  }
+
+
+
+  .actions {
+
+
+
+    margin-inline-start: 0;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   21. RTL SUPPORT
+
+
+
+========================================== */
+
+
+
+html[dir="rtl"] .navigation {
+
+
+
+  direction: rtl;
+
+
+
+}
+
+
+
+html[dir="rtl"] .dropdown-menu {
+
+
+
+  text-align: right;
+
+
+
+}
+
+
+
+/* ==========================================
+
+
+
+   22. REDUCED MOTION
+
+
+
+========================================== */
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+
+  *,
+
+
+
+  *::before,
+
+
+
+  *::after {
+
+
+
+    animation-duration: 0.01ms !important;
+
+
+
+    transition-duration: 0.01ms !important;
+
+
+
+    scroll-behavior: auto !important;
+
+
+
+  }
+
+
+
+}
+
+
+
+/* STICKY HEADER: DROPDOWN AND ANCHOR OFFSET */
+
+.header .dropdown-menu { z-index: 1100; }
+
+section[id] { scroll-margin-top: calc(var(--header-height) + 15px); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+
+   DAILYKART - ALWAYS VISIBLE HEADER
+
+========================================== */
+
+
+
+.header {
+
+  position: fixed !important;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+
+
+  width: 100%;
+
+  z-index: 9999;
+
+
+
+  background: var(--surface);
+
+  border-bottom: 1px solid var(--border);
+
+  border-radius: 0 0 28px 28px;
+
+
+
+  box-shadow: var(--shadow-header);
+
+}
+
+
+
+/* Prevent content from hiding behind header */
+
+body {
+
+  padding-top: var(--header-height);
+
+}
+
+
+
+/* Keep navigation dropdown visible */
+
+.header .dropdown-menu {
+
+  z-index: 10000;
+
+}
+
+
+
+/* Dark mode */
+
+body.dark .header {
+
+  background: var(--surface);
+
+  border-bottom-color: var(--border);
+
+  box-shadow: var(--shadow-header);
+
+}
+
+
+
+/* Smooth navigation scrolling */
+
+html {
+
+  scroll-behavior: smooth;
+
+  scroll-padding-top: calc(var(--header-height) + 15px);
+
+}
+
+
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+
+  .header {
+
+    border-radius: 0 0 24px 24px;
+
+  }
+
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .header {
+
+    border-radius: 0 0 20px 20px;
+
+  }
+
+
+
+  .header .navigation.show {
+
+    max-height: calc(100dvh - var(--header-height) - 20px);
+
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+
+   DAILYKART - GLOBAL TEXT SELECTION
+
+   Applies to the entire website
+
+========================================== */
+
+
+
+/* LIGHT MODE - PINK SELECTION */
+
+::selection {
+
+  background-color: #ED4D91;
+
+  color: #FFFFFF;
+
+  text-shadow: none;
+
+}
+
+
+
+/* Firefox */
+
+::-moz-selection {
+
+  background-color: #ED4D91;
+
+  color: #FFFFFF;
+
+  text-shadow: none;
+
+}
+
+
+
+/* DARK MODE - LAVENDER SELECTION */
+
+body.dark ::selection {
+
+  background-color: #B8A2D6;
+
+  color: #21182B;
+
+  text-shadow: none;
+
+}
+
+
+
+/* Firefox */
+
+body.dark ::-moz-selection {
+
+  background-color: #B8A2D6;
+
+  color: #21182B;
+
+  text-shadow: none;
+
+}
+
+
+
+
+
+/* ==========================================
+   23. ACTIVE NAVIGATION - NO HOVER EFFECT
+   JS applies .active only to the current page.
+========================================== */
+
+/* Home remains visually unchanged on hover. */
+.navigation .home-btn,
+.navigation .home-btn:hover,
+.navigation .home-btn:active {
+  background: var(--soft);
+  color: var(--pink);
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+
+/* No underline unless Home 1 or Home 2 is current. */
+.navigation .home-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  inset-inline-start: 17px;
+  width: 0;
+  height: var(--active-line-height);
+  background: var(--pink);
+  border-radius: var(--radius-pill);
+  transition: none;
+}
+
+.navigation .home-btn.active::after,
+.navigation .home-btn.active:hover::after {
+  width: calc(100% - 34px);
+}
+
+/* Hovering over inactive links must not create an underline. */
+.navigation > a:not(.active):not([aria-current="page"]):hover {
+  color: var(--text);
+}
+.navigation > a:not(.active):not([aria-current="page"]):hover::after {
+  width: 0;
+}
+
+@media (max-width: 1450px) {
+  .navigation .home-btn::after { inset-inline-start: 14px; }
+  .navigation .home-btn.active::after,
+  .navigation .home-btn.active:hover::after { width: calc(100% - 28px); }
+}
+
+@media (max-width: 1100px) {
+  .navigation .home-btn::after { inset-inline-start: 14px; }
+  .navigation .home-btn.active::after,
+  .navigation .home-btn.active:hover::after { width: 45px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   HOME - NORMAL BACKGROUND, ACTIVE LINE ONLY
+========================================== */
+
+/* Home always has a normal background */
+.navigation .home-btn,
+.navigation .home-btn:hover,
+.navigation .home-btn.active,
+.navigation .home-btn.active:hover {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+  color: var(--text);
+}
+
+/* Home active text */
+.navigation .home-btn.active {
+  color: var(--pink);
+}
+
+/* Home underline hidden by default */
+.navigation .home-btn::after,
+.navigation .home-btn:hover::after {
+  width: 0;
+  transition: none;
+}
+
+/* Home underline only on Home 1 and Home 2 */
+.navigation .home-btn.active::after,
+.navigation .home-btn.active:hover::after {
+  width: calc(100% - 28px);
+}
+
+/* Responsive mobile underline */
+@media (max-width: 1100px) {
+  .navigation .home-btn.active::after,
+  .navigation .home-btn.active:hover::after {
+    width: 45px;
+  }
+}

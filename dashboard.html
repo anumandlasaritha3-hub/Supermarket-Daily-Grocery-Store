@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard | DailyKart</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Site CSS (variables, dark theme, theme/RTL buttons) + dashboard CSS -->
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="dash-body">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" id="sidebar" aria-label="Dashboard navigation">
+
+    <!-- BRAND (same as header) -->
+    <a class="brand sidebar-brand" href="index.html" aria-label="DailyKart Home">
+      <img src="images/logo.png" alt="DailyKart grocery cart" class="brand-logo">
+      <div class="brand-details">
+        <div class="brand-name">Daily<span>Kart</span>
+          <i class="bi bi-flower1 brand-flower" aria-hidden="true"></i>
+        </div>
+        <p class="brand-tagline">FRESH ESSENTIALS <span>✿</span> HAPPIER DAYS</p>
+      </div>
+    </a>
+
+    <nav class="side-nav" id="sideNav">
+      <p class="side-label">Menu</p>
+      <a href="#overview"  data-view="overview"  class="side-link active"><i class="bi bi-grid-1x2"></i><span>Overview</span></a>
+      <a href="#lists"     data-view="lists"     class="side-link"><i class="bi bi-card-checklist"></i><span>Shopping Lists</span></a>
+      <a href="#order"     data-view="order"     class="side-link"><i class="bi bi-bag-plus"></i><span>Place an Order</span><em class="side-badge" id="cartBadge" hidden>0</em></a>
+      <a href="#track"     data-view="track"     class="side-link"><i class="bi bi-truck"></i><span>Track Delivery</span></a>
+      <a href="#history"   data-view="history"   class="side-link"><i class="bi bi-clock-history"></i><span>Order History</span></a>
+      <a href="#account"   data-view="account"   class="side-link"><i class="bi bi-person-circle"></i><span>My Account</span></a>
+    </nav>
+
+    <div class="side-card">
+      <i class="bi bi-gift"></i>
+      <h6>Free delivery</h6>
+      <p>On orders above ₹499. Add a few more items to save.</p>
+      <a href="offers.html" class="btn-primary">View offers</a>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ================= MAIN ================= -->
+  <div class="dash-main">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-start">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+          <i class="bi bi-list" id="menuIcon"></i>
+        </button>
+        <div>
+          <h1 class="topbar-title" id="pageTitle">Overview</h1>
+          <p class="topbar-sub" id="pageSub">Your shopping at a glance</p>
+        </div>
+      </div>
+
+      <div class="actions topbar-actions">
+
+        <!-- LIGHT / DARK -->
+        <button type="button" class="theme-btn" id="themeBtn" aria-label="Switch to dark mode" title="Switch theme">
+          <i class="bi bi-sun" id="themeIcon" aria-hidden="true"></i>
+        </button>
+
+        <!-- RTL / LTR -->
+        <button type="button" class="rtl-btn" id="rtlBtn" aria-label="Switch to RTL layout">
+          <span id="rtlText">RTL</span>
+        </button>
+
+        <!-- NOTIFICATIONS -->
+        <div class="dd" id="notifDd">
+          <button type="button" class="theme-btn notif-btn" id="notifBtn" aria-label="Notifications" aria-expanded="false">
+            <i class="bi bi-bell" aria-hidden="true"></i>
+            <span class="notif-dot" id="notifDot">3</span>
+          </button>
+          <div class="dd-menu notif-menu" id="notifMenu">
+            <div class="dd-head">
+              <strong>Notifications</strong>
+              <button type="button" class="link-btn" id="markRead">Mark all read</button>
+            </div>
+            <div id="notifList"></div>
+          </div>
+        </div>
+
+        <!-- PROFILE -->
+        <div class="dd" id="profileDd">
+          <button type="button" class="profile-btn" id="profileBtn" aria-expanded="false" aria-label="Profile menu">
+            <span class="avatar" id="avatarTop">PS</span>
+            <span class="profile-meta">
+              <strong id="nameTop">Priya Sharma</strong>
+              <small>Customer</small>
+            </span>
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="dd-menu profile-menu" id="profileMenu">
+            <div class="dd-user">
+              <span class="avatar lg" id="avatarMenu">PS</span>
+              <div><strong id="nameMenu">Priya Sharma</strong><small id="emailMenu">priya@example.com</small></div>
+            </div>
+            <a href="#account" data-view="account"><i class="bi bi-person"></i> My Account</a>
+            <a href="#history" data-view="history"><i class="bi bi-receipt"></i> Order History</a>
+            <a href="#lists"   data-view="lists"><i class="bi bi-card-checklist"></i> Shopping Lists</a>
+            <a href="index.html"><i class="bi bi-house-door"></i> Back to Store</a>
+            <a href="login.html" class="danger"><i class="bi bi-box-arrow-right"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content" id="content">
+
+      <!-- ========== OVERVIEW ========== -->
+      <section class="view active" id="view-overview">
+        <div class="hello">
+          <div>
+            <h2>Good day, <span id="helloName">Priya</span></h2>
+            <p>Here is what is happening with your groceries today.</p>
+          </div>
+          <button class="btn-primary" data-go="order"><i class="bi bi-bag-plus"></i> Place New Order</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><span class="stat-ic"><i class="bi bi-truck"></i></span><div><small>Active orders</small><strong id="stActive">0</strong></div></div>
+          <div class="stat"><span class="stat-ic"><i class="bi bi-card-checklist"></i></span><div><small>Shopping lists</small><strong id="stLists">0</strong></div></div>
+          <div class="stat"><span class="stat-ic"><i class="bi bi-bag-check"></i></span><div><small>Orders placed</small><strong id="stOrders">0</strong></div></div>
+          <div class="stat"><span class="stat-ic"><i class="bi bi-wallet2"></i></span><div><small>Total spent</small><strong id="stSpent">₹0</strong></div></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-head"><h3>Live delivery</h3><button class="link-btn" data-go="track">Track <i class="bi bi-arrow-right"></i></button></div>
+            <div id="ovLive"></div>
+          </div>
+          <div class="card">
+            <div class="card-head"><h3>Shopping lists</h3><button class="link-btn" data-go="lists">Manage <i class="bi bi-arrow-right"></i></button></div>
+            <div id="ovLists"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3>Recent orders</h3><button class="link-btn" data-go="history">View all <i class="bi bi-arrow-right"></i></button></div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+              <tbody id="ovOrders"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SHOPPING LISTS ========== -->
+      <section class="view" id="view-lists">
+        <div class="lists-layout">
+          <div class="card lists-side">
+            <div class="card-head"><h3>My lists</h3></div>
+            <form class="inline-form" id="newListForm">
+              <input type="text" id="newListName" placeholder="New list name" maxlength="40" required>
+              <button class="btn-primary sm" type="submit"><i class="bi bi-plus-lg"></i></button>
+            </form>
+            <div id="listNav" class="list-nav"></div>
+          </div>
+
+          <div class="card list-detail" id="listDetail"></div>
+        </div>
+      </section>
+
+      <!-- ========== PLACE AN ORDER ========== -->
+      <section class="view" id="view-order">
+        <div class="order-layout">
+          <div>
+            <div class="card">
+              <div class="toolbar">
+                <div class="search"><i class="bi bi-search"></i><input type="search" id="prodSearch" placeholder="Search groceries"></div>
+                <div class="chips" id="catChips"></div>
+              </div>
+              <div class="prod-grid" id="prodGrid"></div>
+            </div>
+          </div>
+
+          <aside class="card cart" id="cartPanel">
+            <div class="card-head"><h3>Your cart</h3><button class="link-btn" id="clearCart">Clear</button></div>
+            <div id="cartItems"></div>
+
+            <div class="cart-totals" id="cartTotals"></div>
+
+            <div class="field"><label for="addrSel">Delivery address</label>
+              <select id="addrSel"></select></div>
+            <div class="field"><label for="slotSel">Delivery slot</label>
+              <select id="slotSel">
+                <option>Today, 6 PM – 8 PM</option>
+                <option>Tomorrow, 8 AM – 10 AM</option>
+                <option>Tomorrow, 12 PM – 2 PM</option>
+                <option>Tomorrow, 6 PM – 8 PM</option>
+              </select></div>
+            <div class="field"><label>Payment</label>
+              <div class="pay-opts" id="payOpts">
+                <label class="pay"><input type="radio" name="pay" value="UPI" checked><span><i class="bi bi-phone"></i> UPI</span></label>
+                <label class="pay"><input type="radio" name="pay" value="Card"><span><i class="bi bi-credit-card"></i> Card</span></label>
+                <label class="pay"><input type="radio" name="pay" value="Cash on Delivery"><span><i class="bi bi-cash-coin"></i> Cash</span></label>
+              </div></div>
+            <div class="field"><label for="orderNote">Note for delivery partner (optional)</label>
+              <input type="text" id="orderNote" placeholder="e.g. Ring the bell twice"></div>
+
+            <button class="btn-primary block" id="placeOrder"><i class="bi bi-check2-circle"></i> Place Order</button>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========== TRACK DELIVERY ========== -->
+      <section class="view" id="view-track">
+        <div id="trackWrap"></div>
+      </section>
+
+      <!-- ========== ORDER HISTORY ========== -->
+      <section class="view" id="view-history">
+        <div class="card">
+          <div class="toolbar">
+            <div class="search"><i class="bi bi-search"></i><input type="search" id="histSearch" placeholder="Search order ID or item"></div>
+            <div class="chips" id="histChips"></div>
+          </div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead>
+              <tbody id="histBody"></tbody>
+            </table>
+          </div>
+          <p class="empty" id="histEmpty" hidden>No orders match your search.</p>
+        </div>
+      </section>
+
+      <!-- ========== MY ACCOUNT ========== -->
+      <section class="view" id="view-account">
+        <div class="grid-2 account-grid">
+          <form class="card" id="profileForm">
+            <div class="card-head"><h3>Profile details</h3></div>
+            <div class="acc-top">
+              <span class="avatar xl" id="avatarBig">PS</span>
+              <div><strong id="accName">Priya Sharma</strong><small>Customer since 2025</small></div>
+            </div>
+            <div class="form-grid">
+              <div class="field"><label for="fName">Full name</label><input id="fName" required></div>
+              <div class="field"><label for="fEmail">Email</label><input id="fEmail" type="email" required></div>
+              <div class="field"><label for="fPhone">Phone</label><input id="fPhone" type="tel" required></div>
+              <div class="field"><label for="fDob">Date of birth</label><input id="fDob" type="date"></div>
+            </div>
+            <button class="btn-primary" type="submit"><i class="bi bi-check2"></i> Save changes</button>
+          </form>
+
+          <div class="card">
+            <div class="card-head"><h3>Saved addresses</h3></div>
+            <div id="addrList"></div>
+            <form class="inline-form" id="addrForm">
+              <input type="text" id="addrInput" placeholder="Add a new address" required>
+              <button class="btn-secondary sm" type="submit"><i class="bi bi-plus-lg"></i> Add</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><h3>Notification preferences</h3></div>
+            <div id="prefList"></div>
+          </div>
+
+          <form class="card" id="passForm">
+            <div class="card-head"><h3>Change password</h3></div>
+            <div class="field"><label for="pCur">Current password</label><input id="pCur" type="password" autocomplete="current-password" required></div>
+            <div class="field"><label for="pNew">New password</label><input id="pNew" type="password" minlength="8" autocomplete="new-password" required></div>
+            <div class="field"><label for="pCon">Confirm new password</label><input id="pCon" type="password" minlength="8" autocomplete="new-password" required></div>
+            <button class="btn-primary" type="submit"><i class="bi bi-shield-lock"></i> Update password</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ORDER DETAILS MODAL -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-x" id="modalX" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

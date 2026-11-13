@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | DailyKart</title>
+  <meta name="description" content="Shop fresh fruits, vegetables, dairy, bakery, pantry staples and beverages at DailyKart.">
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="layouts.css">
+</head>
+<body>
+
+
+  <header class="header">
+
+    <div class="header-content">
+
+      <!-- BRAND -->
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="DailyKart Home"
+      >
+        <img
+          src="images/logo.png"
+          alt="DailyKart grocery cart"
+          class="brand-logo"
+        >
+
+        <div class="brand-details">
+          <div class="brand-name">
+            Daily<span>Kart</span>
+            <i
+              class="bi bi-flower1 brand-flower"
+              aria-hidden="true"
+            ></i>
+          </div>
+
+          <p class="brand-tagline">
+            FRESH ESSENTIALS
+            <span>✿</span>
+            HAPPIER DAYS
+          </p>
+        </div>
+      </a>
+
+      <!-- MAIN NAVIGATION -->
+      <nav
+        class="navigation"
+        id="navigation"
+        aria-label="Main navigation"
+      >
+
+        <!-- HOME DROPDOWN -->
+        <div class="dropdown" id="homeDropdown">
+
+          <button
+            type="button"
+            class="home-btn"
+            id="homeBtn"
+            aria-expanded="false"
+            aria-controls="homeMenu"
+          >
+            <span>Home</span>
+            <i
+              class="bi bi-chevron-down"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <div
+            class="dropdown-menu"
+            id="homeMenu"
+          >
+            <a href="index.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-door"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 1
+            </a>
+
+            <a href="home2.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-heart"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 2
+            </a>
+          </div>
+
+        </div>
+
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+          <a href="delivery-info.html">Delivery Info</a>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+
+      </nav>
+
+      <!-- HEADER ACTIONS -->
+      <div class="actions">
+
+        <!-- LIGHT / DARK -->
+        <button
+          type="button"
+          class="theme-btn"
+          id="themeBtn"
+          aria-label="Switch to dark mode"
+          title="Switch theme"
+        >
+          <i
+            class="bi bi-sun"
+            id="themeIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+        <!-- RTL / LTR -->
+        <button
+          type="button"
+          class="rtl-btn"
+          id="rtlBtn"
+          aria-label="Switch to RTL layout"
+        >
+        
+          <span id="rtlText">RTL</span>
+        </button>
+
+        <!-- LOGIN -->
+        <a href="login.html" class="login-btn">
+          <i
+            class="bi bi-person-fill"
+            aria-hidden="true"
+          ></i>
+          <span>Login</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button
+          type="button"
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <i
+            class="bi bi-list"
+            id="menuIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- DECORATIVE CORNERS -->
+    <div class="corner corner-left" aria-hidden="true"></div>
+    <div class="corner corner-right" aria-hidden="true"></div>
+
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+<main class="dk-pp">
+
+<!-- 1. HERO -->
+<section class="dk-pp-hero lx-b-plum">
+  <div class="dk-pp-wrap dk-pp-hero-grid">
+    <div data-reveal>
+      <span class="dk-pp-label"><i class="bi bi-basket"></i> Shop All Products</span>
+      <h1>Fresh products, <span>fair prices</span></h1>
+      <p class="dk-pp-lead">Fruits, vegetables, dairy, bakery and pantry staples, hand-picked and delivered fresh to your door.</p>
+      <form class="dk-pp-search" id="ppHeroForm" role="search"><i class="bi bi-search"></i><input id="ppHeroSearch" type="search" placeholder="Search apples, milk, rice..." aria-label="Search products"><button class="btn-primary" type="submit">Search</button></form>
+      <div class="dk-pp-chips"><button class="dk-pp-chip" data-cat="fruits">Fruits</button><button class="dk-pp-chip" data-cat="vegetables">Vegetables</button><button class="dk-pp-chip" data-cat="dairy">Dairy</button><button class="dk-pp-chip" data-cat="bakery">Bakery</button><button class="dk-pp-chip" data-cat="pantry">Pantry</button></div>
+    </div>
+    <div class="dk-pp-visual" data-reveal>
+      <img src="images/products-hero.png" alt="Fresh groceries">
+      <div class="dk-pp-float a"><span class="dk-pp-icon"><i class="bi bi-truck"></i></span><div><strong>Free delivery</strong><small>On orders above ₹499</small></div></div>
+      <div class="dk-pp-float b"><span class="dk-pp-icon"><i class="bi bi-percent"></i></span><div><strong>Up to 25% off</strong><small>On daily essentials</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. CATEGORIES -->
+<section class="dk-pp-alt">
+  <div class="dk-pp-wrap">
+    <div class="dk-pp-head" data-reveal><span class="dk-pp-label"><i class="bi bi-grid"></i> Categories</span><h2>Shop by <span>category</span></h2><p>Jump straight to what you need.</p></div>
+    <div class="dk-pp-cats">
+      <button class="dk-pp-cat" data-cat="fruits" data-reveal><img src="images/category-fruits.png" alt=""><strong>Fruits</strong><small data-count="fruits"></small></button>
+      <button class="dk-pp-cat" data-cat="vegetables" data-reveal><img src="images/category-vegetables.png" alt=""><strong>Vegetables</strong><small data-count="vegetables"></small></button>
+      <button class="dk-pp-cat" data-cat="dairy" data-reveal><img src="images/category-dairy.png" alt=""><strong>Dairy</strong><small data-count="dairy"></small></button>
+      <button class="dk-pp-cat" data-cat="bakery" data-reveal><img src="images/category-bakery.png" alt=""><strong>Bakery</strong><small data-count="bakery"></small></button>
+      <button class="dk-pp-cat" data-cat="pantry" data-reveal><img src="images/category-pantry.png" alt=""><strong>Pantry</strong><small data-count="pantry"></small></button>
+      <button class="dk-pp-cat" data-cat="beverages" data-reveal><img src="images/category-beverages.png" alt=""><strong>Beverages</strong><small data-count="beverages"></small></button>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ALL PRODUCTS -->
+<section id="shop">
+  <div class="dk-pp-wrap">
+    <div class="dk-pp-head" data-reveal><span class="dk-pp-label"><i class="bi bi-stars"></i> Our Products</span><h2>Everything you need, <span>fresh daily</span></h2></div>
+    <div class="dk-pp-bar">
+      <div class="dk-pp-pills">
+        <button class="dk-pp-pill on" data-cat="all">All</button><button class="dk-pp-pill" data-cat="fruits">Fruits</button><button class="dk-pp-pill" data-cat="vegetables">Vegetables</button><button class="dk-pp-pill" data-cat="dairy">Dairy</button><button class="dk-pp-pill" data-cat="bakery">Bakery</button><button class="dk-pp-pill" data-cat="pantry">Pantry</button><button class="dk-pp-pill" data-cat="beverages">Beverages</button>
+      </div>
+      <div class="dk-pp-tools">
+        <input id="ppSearch" type="search" placeholder="Search products" aria-label="Search products">
+        <select id="ppPrice" aria-label="Price range"><option value="any">Any price</option><option value="u100">Under ₹100</option><option value="mid">₹100 to ₹250</option><option value="o250">Above ₹250</option></select>
+        <select id="ppSort" aria-label="Sort by"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="discount">Biggest discount</option><option value="rating">Top rated</option></select>
+      </div>
+    </div>
+    <p class="dk-pp-count" id="ppCount"></p>
+    <div class="dk-pp-grid" id="ppGrid"></div>
+    <div class="dk-pp-empty" id="ppEmpty"><i class="bi bi-search"></i><h3>No products found</h3><p>Try a different search or clear your filters.</p><button class="btn-primary" id="ppReset" type="button">Clear Filters</button></div>
+  </div>
+</section>
+
+<!-- 4. DEALS -->
+<section class="dk-pp-alt">
+  <div class="dk-pp-wrap">
+    <div class="dk-pp-head" data-reveal><span class="dk-pp-label"><i class="bi bi-tag"></i> Special Offers</span><h2>Deals you will <span>love</span></h2><p>Save more on the things you buy every week.</p></div>
+    <div class="dk-pp-deals">
+      <article class="dk-pp-deal" data-reveal style="background-image:url('images/offer-fruits.png')"><em>UP TO 20% OFF</em><h3>Fresh Fruit Fiesta</h3><button class="btn-secondary" data-cat="fruits">Shop Fruits</button></article>
+      <article class="dk-pp-deal" data-reveal style="background-image:url('images/offer-essentials.png')"><em>SAVE EVERY DAY</em><h3>Daily Essentials</h3><button class="btn-secondary" data-cat="pantry">Shop Pantry</button></article>
+      <article class="dk-pp-deal" data-reveal style="background-image:url('images/offer-snacks.png')"><em>PARTY READY</em><h3>Snacks &amp; Drinks</h3><button class="btn-secondary" data-cat="beverages">Shop Drinks</button></article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHY SHOP -->
+<section>
+  <div class="dk-pp-wrap">
+    <div class="dk-pp-head" data-reveal><span class="dk-pp-label"><i class="bi bi-shield-check"></i> Why DailyKart</span><h2>Shop with <span>confidence</span></h2></div>
+    <div class="dk-pp-why">
+      <article data-reveal><span class="dk-pp-icon"><i class="bi bi-flower1"></i></span><h3>Farm fresh quality</h3><p>Every item is checked before it is packed for you.</p></article>
+      <article data-reveal><span class="dk-pp-icon"><i class="bi bi-tag"></i></span><h3>Best prices</h3><p>Fair everyday pricing with new offers every week.</p></article>
+      <article data-reveal><span class="dk-pp-icon"><i class="bi bi-lightning-charge"></i></span><h3>Fast delivery</h3><p>Express orders reach you in about 60 minutes.</p></article>
+      <article data-reveal><span class="dk-pp-icon"><i class="bi bi-arrow-repeat"></i></span><h3>Easy returns</h3><p>Not happy? We replace or refund within 24 hours.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CTA -->
+<section style="padding-top:0">
+  <div class="dk-pp-wrap">
+    <div class="dk-pp-cta lx-c-light-reverse" data-reveal>
+      <div><h2>Ready for <span>fresh groceries?</span></h2><p>Fill your basket today and get free delivery on orders above ₹499.</p>
+        <div class="dk-pp-actions"><a class="btn-primary" href="#shop">Start Shopping</a><a class="btn-secondary" href="delivery-info.html">Delivery Info</a></div></div>
+      <img src="images/promo-delivery.png" alt="DailyKart delivery" loading="lazy">
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Basket bar + drawer -->
+<div class="dk-pp-basket" id="ppBasket"><i class="bi bi-basket2-fill"></i><div class="info"><strong id="ppBn"></strong><small id="ppBm"></small><div class="dk-pp-meter"><i id="ppMeter"></i></div></div><button type="button" id="ppOpen">View Basket</button></div>
+<div class="dk-pp-drawer" id="ppDrawer"><aside class="dk-pp-panel" aria-label="Basket">
+  <header><h3>Your Basket</h3><button type="button" id="ppClose" aria-label="Close"><i class="bi bi-x-lg"></i></button></header>
+  <div class="dk-pp-items" id="ppItems"></div>
+  <div class="dk-pp-sum"><div><span>Subtotal</span><span id="ppSub"></span></div><div><span>Delivery</span><span id="ppFee"></span></div><div class="tot"><span>Total</span><span id="ppTot"></span></div><button class="btn-primary" type="button" id="ppCheckout">Checkout</button></div>
+</aside></div>
+<div class="dk-pp-toast" id="ppToast" role="status" aria-live="polite"></div>
+
+
+
+  <footer class="dk-footer">
+
+ 
+
+  <!-- MAIN FOOTER -->
+  <div class="dk-footer-main">
+    <div class="dk-footer-container">
+
+      <!-- BRAND -->
+      <div class="dk-footer-col dk-footer-about">
+
+        <a href="index.html" class="dk-footer-brand">
+          <img
+            src="images/logo.png"
+            alt=""
+            class="dk-footer-logo"
+          >
+
+          <div class="dk-footer-brand-content">
+            <span class="dk-footer-brand-name">
+              Daily<span>Kart</span>
+              <i class="bi bi-flower1"></i>
+            </span>
+
+            <span class="dk-footer-tagline">
+              FRESH ESSENTIALS ✿ HAPPIER DAYS
+            </span>
+          </div>
+        </a>
+
+        <p class="dk-footer-description">
+          Bringing freshness, quality and convenience
+          to your everyday shopping. From farm-fresh
+          produce to household essentials, find
+          everything you love at DailyKart.
+        </p>
+
+        <div class="dk-footer-social">
+          <a
+            href="https://www.instagram.com/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a
+            href="https://www.pinterest.com/"
+            aria-label="Pinterest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-pinterest"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Explore</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Shop Products</a></li>
+          <li><a href="offers.html">Special Offers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Shop Categories</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="products.html?cat=fruits#shop">Fruits & Vegetables</a></li>
+          <li><a href="products.html?cat=dairy#shop">Dairy & Eggs</a></li>
+          <li><a href="products.html?cat=bakery#shop">Bakery & Snacks</a></li>
+          <li><a href="products.html?cat=pantry#shop">Rice, Atta & Pulses</a></li>
+          <li><a href="products.html?cat=beverages#shop">Beverages</a></li>
+          <li><a href="products.html?cat=pantry#shop">Household Essentials</a></li>
+        </ul>
+      </div>
+
+      <!-- CUSTOMER SUPPORT -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Customer Care</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="contact.html#contact-form">Help & Support</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="delivery-info.html">Shipping Information</a></li>
+          <li><a href="delivery-info.html">Returns & Refunds</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="dk-footer-col dk-footer-contact">
+        <h3 class="dk-footer-title">Get in Touch</h3>
+
+        <p>
+          Have a question? We're here to help
+          make your shopping experience better.
+        </p>
+
+        <a href="mailto:hello@example.com" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-envelope"></i>
+          </span>
+
+          <span>hello@example.com</span>
+        </a>
+
+        <a href="contact.html#contact-form" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-chat-dots"></i>
+          </span>
+
+          <span>Contact our support team</span>
+        </a>
+
+        <div class="dk-footer-promise">
+          <i class="bi bi-heart-fill"></i>
+          Freshness in Every Cart
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRUST STRIP -->
+
+
+  <!-- COPYRIGHT -->
+  <div class="dk-footer-bottom">
+    <div class="dk-footer-bottom-inner">
+
+      <p>
+        © <span id="dkFooterYear">2026</span>
+        <strong>DailyKart</strong>.
+        All rights reserved.
+      </p>
+
+  
+
+      <div class="dk-footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <span aria-hidden="true">•</span>
+        <a href="terms.html">Terms</a>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+<script src="products.js"></script>
+<script src="nav.js"></script>
+<script src="footer.js"></script>
+</body>
+</html>

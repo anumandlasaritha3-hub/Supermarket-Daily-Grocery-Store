@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulk & Party Orders | DailyKart</title>
+  <meta name="description" content="Large orders for parties, offices and festivals, with special pricing.">
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="layouts.css">
+  <script>try{if(localStorage.getItem("dailykart-theme")==="dark"){document.addEventListener("DOMContentLoaded",function(){document.body.classList.add("dark")})}}catch(e){}</script>
+</head>
+<body>
+
+
+
+  <header class="header">
+
+    <div class="header-content">
+
+      <!-- BRAND -->
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="DailyKart Home"
+      >
+        <img
+          src="images/logo.png"
+          alt="DailyKart grocery cart"
+          class="brand-logo"
+        >
+
+        <div class="brand-details">
+          <div class="brand-name">
+            Daily<span>Kart</span>
+            <i
+              class="bi bi-flower1 brand-flower"
+              aria-hidden="true"
+            ></i>
+          </div>
+
+          <p class="brand-tagline">
+            FRESH ESSENTIALS
+            <span>✿</span>
+            HAPPIER DAYS
+          </p>
+        </div>
+      </a>
+
+      <!-- MAIN NAVIGATION -->
+      <nav
+        class="navigation"
+        id="navigation"
+        aria-label="Main navigation"
+      >
+
+        <!-- HOME DROPDOWN -->
+        <div class="dropdown" id="homeDropdown">
+
+          <button
+            type="button"
+            class="home-btn"
+            id="homeBtn"
+            aria-expanded="false"
+            aria-controls="homeMenu"
+          >
+            <span>Home</span>
+            <i
+              class="bi bi-chevron-down"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <div
+            class="dropdown-menu"
+            id="homeMenu"
+          >
+            <a href="index.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-door"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 1
+            </a>
+
+            <a href="home2.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-heart"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 2
+            </a>
+          </div>
+
+        </div>
+
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+          <a href="delivery-info.html">Delivery Info</a>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+
+      </nav>
+
+      <!-- HEADER ACTIONS -->
+      <div class="actions">
+
+        <!-- LIGHT / DARK -->
+        <button
+          type="button"
+          class="theme-btn"
+          id="themeBtn"
+          aria-label="Switch to dark mode"
+          title="Switch theme"
+        >
+          <i
+            class="bi bi-sun"
+            id="themeIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+        <!-- RTL / LTR -->
+        <button
+          type="button"
+          class="rtl-btn"
+          id="rtlBtn"
+          aria-label="Switch to RTL layout"
+        >
+        
+          <span id="rtlText">RTL</span>
+        </button>
+
+        <!-- LOGIN -->
+        <a href="login.html" class="login-btn">
+          <i
+            class="bi bi-person-fill"
+            aria-hidden="true"
+          ></i>
+          <span>Login</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button
+          type="button"
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <i
+            class="bi bi-list"
+            id="menuIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- DECORATIVE CORNERS -->
+    <div class="corner corner-left" aria-hidden="true"></div>
+    <div class="corner corner-right" aria-hidden="true"></div>
+
+  </header>
+
+
+
+
+
+
+
+
+
+
+<main class="dk-sv">
+
+<!-- 1. BANNER -->
+<section class="dk-sv-banner lx-b-card" style="--bn:url('images/Orders-hero.png');background-image:var(--bn)">
+  <div class="dk-sv-wrap">
+ 
+    <h1>Bulk & Party Orders</h1>
+    <p class="dk-sv-lead">Large orders for parties, offices and festivals, with special pricing.</p>
+    <div class="dk-sv-chips"><span><i class="bi bi-tag"></i> Custom quote</span><span><i class="bi bi-clock"></i> Plan 2 days ahead</span><span><i class="bi bi-person-heart"></i> Parties and offices</span></div>
+    <div class="dk-sv-actions"><a class="btn-primary" href="#details">Full Details <i class="bi bi-arrow-down"></i></a><a class="btn-secondary" href="contact.html">Contact Us</a></div>
+  </div>
+</section>
+
+<!-- 2. FULL DETAILS -->
+<section id="details">
+  <div class="dk-sv-wrap dk-sv-layout">
+    <div>
+      <div class="dk-sv-block" data-reveal><span class="dk-sv-label"><i class="bi bi-info-circle"></i> Overview</span><h2>About Bulk & Party Orders</h2><p>Bulk & Party Orders are for celebrations, offices, festivals and events. Share your list and we will prepare a custom order at better prices.</p><p>A dedicated helper will guide you from quote to delivery, so a big order stays simple.</p></div>
+      <div class="dk-sv-block" data-reveal><span class="dk-sv-label"><i class="bi bi-gift"></i> What You Get</span><h2>Everything included</h2>
+        <ul class="dk-sv-incl2"><li><span class="dk-sv-icon"><i class="bi bi-check2-circle"></i></span><div><h3>Bulk pricing</h3><p>Better rates on larger quantities.</p></div></li><li><span class="dk-sv-icon"><i class="bi bi-check2-circle"></i></span><div><h3>Dedicated helper</h3><p>One contact for your whole order.</p></div></li><li><span class="dk-sv-icon"><i class="bi bi-check2-circle"></i></span><div><h3>Custom quote</h3><p>Reply within 24 hours.</p></div></li><li><span class="dk-sv-icon"><i class="bi bi-check2-circle"></i></span><div><h3>Flexible delivery</h3><p>Choose the date and time.</p></div></li><li><span class="dk-sv-icon"><i class="bi bi-check2-circle"></i></span><div><h3>Repeat orders</h3><p>Save your list for next time.</p></div></li><li><span class="dk-sv-icon"><i class="bi bi-check2-circle"></i></span><div><h3>Quality assured</h3><p>Same freshness checks as always.</p></div></li></ul></div>
+      <div class="dk-sv-block" data-reveal><span class="dk-sv-label"><i class="bi bi-list-check"></i> How It Works</span><h2>Four simple steps</h2>
+        <div class="dk-sv-timeline"><div class="dk-sv-tl"><div class="dk-sv-step-num">1</div><div><em>STEP 01</em><h3>Share your list</h3><p style="margin:4px 0 0;font-size:14.5px">Send us what you need.</p></div></div><div class="dk-sv-tl"><div class="dk-sv-step-num">2</div><div><em>STEP 02</em><h3>Get a quote</h3><p style="margin:4px 0 0;font-size:14.5px">We reply within 24 hours.</p></div></div><div class="dk-sv-tl"><div class="dk-sv-step-num">3</div><div><em>STEP 03</em><h3>Confirm</h3><p style="margin:4px 0 0;font-size:14.5px">Approve the order and delivery time.</p></div></div><div class="dk-sv-tl"><div class="dk-sv-step-num">4</div><div><em>STEP 04</em><h3>We deliver</h3><p style="margin:4px 0 0;font-size:14.5px">Your order arrives on the day.</p></div></div></div></div>
+      <div class="dk-sv-block" data-reveal><span class="dk-sv-label"><i class="bi bi-receipt"></i> Details</span><h2>Pricing and terms</h2>
+        <table class="dk-sv-infotable"><tr><td>Eligible orders</td><td>₹3,000 and above</td></tr><tr><td>Pricing</td><td>Custom quote, avg. 10% savings</td></tr><tr><td>Plan ahead</td><td>At least 2 days</td></tr><tr><td>Quote time</td><td>Within 24 hours</td></tr><tr><td>Payment</td><td>UPI, cards, bank transfer</td></tr></table></div>
+      <div class="dk-sv-block" data-reveal><span class="dk-sv-label"><i class="bi bi-question-circle"></i> FAQ</span><h2>Good to know</h2>
+        <div class="dk-sv-faq-list" style="margin-top:20px"><details open><summary>What counts as a bulk order?<i class="bi bi-plus-lg"></i></summary><p>Orders above ₹3,000 or with larger quantities of the same item.</p></details><details><summary>How do I get a quote?<i class="bi bi-plus-lg"></i></summary><p>Send your list through the contact page and we reply the same day.</p></details><details><summary>Can I change the order later?<i class="bi bi-plus-lg"></i></summary><p>Yes, until it is packed.</p></details></div></div>
+    </div>
+    <aside class="dk-sv-book">
+      <small class="dk-sv-muted">Starting at</small><div class="price">Custom quote</div><hr>
+      <ul class="dk-sv-rows"><li><span><i class="bi bi-clock"></i> Timing</span><strong>Plan 2 days ahead</strong></li><li><span><i class="bi bi-person-heart"></i> Best for</span><strong>Parties and offices</strong></li><li><span><i class="bi bi-geo-alt"></i> Coverage</span><strong>Our areas</strong></li></ul>
+      <button type="button" class="btn-primary" id="svBook"><i class="bi bi-calendar-check"></i> Get This Service</button>
+      <a class="btn-secondary" href="contact.html"><i class="bi bi-headset"></i> Ask a Question</a>
+      <div class="dk-sv-note"><i class="bi bi-shield-check"></i> Freshness promise on every order</div>
+    </aside>
+  </div>
+</section>
+
+<!-- 3. RELATED SERVICES -->
+<section class="dk-sv-alt">
+  <div class="dk-sv-wrap">
+    <div class="dk-sv-head" data-reveal><span class="dk-sv-label"><i class="bi bi-grid"></i> Related Services</span><h2>Pairs well <span>with</span></h2><p>Customers who use Bulk & Party Orders often love these too.</p></div>
+    <div class="dk-sv-others"><article class="dk-sv-card" data-reveal><div class="dk-sv-card-img"><img src="images/Gift Hampers.png" alt="Gift Hampers" loading="lazy"><span class="dk-sv-tag">Gifting</span><span class="dk-sv-badge"><i class="bi bi-gift"></i></span></div><div class="dk-sv-card-body"><h3>Gift Hampers</h3><p>Thoughtful hampers of fresh fruit, snacks and pantry treats for loved ones.</p><div class="dk-sv-card-foot"><div><small>Starting at</small><strong>From ₹599</strong></div><a class="dk-sv-link" href="service-gift-hampers.html">View details <i class="bi bi-arrow-right"></i></a></div></div></article><article class="dk-sv-card" data-reveal><div class="dk-sv-card-img"><img src="images/Home Delivery.png" alt="Home Delivery" loading="lazy"><span class="dk-sv-tag">Everyday</span><span class="dk-sv-badge"><i class="bi bi-truck"></i></span></div><div class="dk-sv-card-body"><h3>Home Delivery</h3><p>Fresh groceries delivered to your door, with a delivery slot that suits your day.</p><div class="dk-sv-card-foot"><div><small>Starting at</small><strong>Free above ₹499</strong></div><a class="dk-sv-link" href="service-home-delivery.html">View details <i class="bi bi-arrow-right"></i></a></div></div></article><article class="dk-sv-card" data-reveal><div class="dk-sv-card-img"><img src="images/Express Delivery.png" alt="Express Delivery" loading="lazy"><span class="dk-sv-tag">Fast</span><span class="dk-sv-badge"><i class="bi bi-lightning-charge"></i></span></div><div class="dk-sv-card-body"><h3>Express Delivery</h3><p>Forgot something? Get your essentials in about 60 minutes.</p><div class="dk-sv-card-foot"><div><small>Starting at</small><strong>₹39 per order</strong></div><a class="dk-sv-link" href="service-express-delivery.html">View details <i class="bi bi-arrow-right"></i></a></div></div></article></div>
+  </div>
+</section>
+
+<!-- 4. CUSTOMER REVIEW -->
+<section>
+  <div class="dk-sv-wrap">
+    <div class="dk-sv-quote" data-reveal><img src="images/customer-rahul.png" alt="Rahul" loading="lazy"><div><div class="dk-sv-stars">★★★★★</div><p>“We stocked our office pantry for the whole month with one order. Smooth and well priced.”</p><strong>Rahul</strong> <small class="dk-sv-muted">· Bulk & Party Orders customer</small></div></div>
+  </div>
+</section>
+
+<!-- 5. CTA -->
+<section style="padding-top:0">
+  <div class="dk-sv-wrap">
+    <div class="dk-sv-cta-box lx-c-stack" data-reveal>
+      <div><h2>Ready to try <span>Bulk & Party Orders?</span></h2><p>Start today, or talk to our friendly team if you have any questions.</p>
+        <div class="dk-sv-actions"><a class="btn-primary" href="products.html">Start Shopping</a><a class="btn-secondary" href="contact.html">Contact Us</a></div></div>
+      <img src="images/promo-offers.png" alt="DailyKart offers" loading="lazy">
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+<footer class="dk-footer">
+
+ 
+
+  <!-- MAIN FOOTER -->
+  <div class="dk-footer-main">
+    <div class="dk-footer-container">
+
+      <!-- BRAND -->
+      <div class="dk-footer-col dk-footer-about">
+
+        <a href="index.html" class="dk-footer-brand">
+          <img
+            src="images/logo.png"
+            alt=""
+            class="dk-footer-logo"
+          >
+
+          <div class="dk-footer-brand-content">
+            <span class="dk-footer-brand-name">
+              Daily<span>Kart</span>
+              <i class="bi bi-flower1"></i>
+            </span>
+
+            <span class="dk-footer-tagline">
+              FRESH ESSENTIALS ✿ HAPPIER DAYS
+            </span>
+          </div>
+        </a>
+
+        <p class="dk-footer-description">
+          Bringing freshness, quality and convenience
+          to your everyday shopping. From farm-fresh
+          produce to household essentials, find
+          everything you love at DailyKart.
+        </p>
+
+        <div class="dk-footer-social">
+          <a
+            href="https://www.instagram.com/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a
+            href="https://www.pinterest.com/"
+            aria-label="Pinterest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-pinterest"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Explore</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Shop Products</a></li>
+          <li><a href="offers.html">Special Offers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Shop Categories</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="products.html?cat=fruits#shop">Fruits & Vegetables</a></li>
+          <li><a href="products.html?cat=dairy#shop">Dairy & Eggs</a></li>
+          <li><a href="products.html?cat=bakery#shop">Bakery & Snacks</a></li>
+          <li><a href="products.html?cat=pantry#shop">Rice, Atta & Pulses</a></li>
+          <li><a href="products.html?cat=beverages#shop">Beverages</a></li>
+          <li><a href="products.html?cat=pantry#shop">Household Essentials</a></li>
+        </ul>
+      </div>
+
+      <!-- CUSTOMER SUPPORT -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Customer Care</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="contact.html#contact-form">Help & Support</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="delivery-info.html">Shipping Information</a></li>
+          <li><a href="delivery-info.html">Returns & Refunds</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="dk-footer-col dk-footer-contact">
+        <h3 class="dk-footer-title">Get in Touch</h3>
+
+        <p>
+          Have a question? We're here to help
+          make your shopping experience better.
+        </p>
+
+        <a href="mailto:hello@example.com" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-envelope"></i>
+          </span>
+
+          <span>hello@example.com</span>
+        </a>
+
+        <a href="contact.html#contact-form" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-chat-dots"></i>
+          </span>
+
+          <span>Contact our support team</span>
+        </a>
+
+        <div class="dk-footer-promise">
+          <i class="bi bi-heart-fill"></i>
+          Freshness in Every Cart
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRUST STRIP -->
+
+
+  <!-- COPYRIGHT -->
+  <div class="dk-footer-bottom">
+    <div class="dk-footer-bottom-inner">
+
+      <p>
+        © <span id="dkFooterYear">2026</span>
+        <strong>DailyKart</strong>.
+        All rights reserved.
+      </p>
+
+  
+
+      <div class="dk-footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <span aria-hidden="true">•</span>
+        <a href="terms.html">Terms</a>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+<div class="dk-sv-toast" id="svToast" role="status" aria-live="polite"></div>
+<script src="services-data.js"></script>
+<script src="services.js"></script>
+<script src="footer.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

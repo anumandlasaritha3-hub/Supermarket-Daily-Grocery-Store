@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DailyKart | Fresh Essentials, Happier Days</title>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+  
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="layouts.css">
+  <!-- Main JS -->
+
+</head>
+
+<body>
+
+
+
+  <header class="header">
+
+    <div class="header-content">
+
+      <!-- BRAND -->
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="DailyKart Home"
+      >
+        <img
+          src="images/logo.png"
+          alt="DailyKart grocery cart"
+          class="brand-logo"
+        >
+
+        <div class="brand-details">
+          <div class="brand-name">
+            Daily<span>Kart</span>
+            <i
+              class="bi bi-flower1 brand-flower"
+              aria-hidden="true"
+            ></i>
+          </div>
+
+          <p class="brand-tagline">
+            FRESH ESSENTIALS
+            <span>✿</span>
+            HAPPIER DAYS
+          </p>
+        </div>
+      </a>
+
+      <!-- MAIN NAVIGATION -->
+      <nav
+        class="navigation"
+        id="navigation"
+        aria-label="Main navigation"
+      >
+
+        <!-- HOME DROPDOWN -->
+        <div class="dropdown" id="homeDropdown">
+
+          <button
+            type="button"
+            class="home-btn"
+            id="homeBtn"
+            aria-expanded="false"
+            aria-controls="homeMenu"
+          >
+            <span>Home</span>
+            <i
+              class="bi bi-chevron-down"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <div
+            class="dropdown-menu"
+            id="homeMenu"
+          >
+            <a href="index.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-door"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 1
+            </a>
+
+            <a href="home2.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-heart"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 2
+            </a>
+          </div>
+
+        </div>
+
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+          <a href="delivery-info.html">Delivery Info</a>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+
+      </nav>
+
+      <!-- HEADER ACTIONS -->
+      <div class="actions">
+
+        <!-- LIGHT / DARK -->
+        <button
+          type="button"
+          class="theme-btn"
+          id="themeBtn"
+          aria-label="Switch to dark mode"
+          title="Switch theme"
+        >
+          <i
+            class="bi bi-sun"
+            id="themeIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+        <!-- RTL / LTR -->
+        <button
+          type="button"
+          class="rtl-btn"
+          id="rtlBtn"
+          aria-label="Switch to RTL layout"
+        >
+        
+          <span id="rtlText">RTL</span>
+        </button>
+
+        <!-- LOGIN -->
+        <a href="login.html" class="login-btn">
+          <i
+            class="bi bi-person-fill"
+            aria-hidden="true"
+          ></i>
+          <span>Login</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button
+          type="button"
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <i
+            class="bi bi-list"
+            id="menuIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- DECORATIVE CORNERS -->
+    <div class="corner corner-left" aria-hidden="true"></div>
+    <div class="corner corner-right" aria-hidden="true"></div>
+
+  </header>
+
+
+
+
+
+
+
+<main id="main">
+<!--
+  ======================================
+  SECTION 1: ABOUT HERO
+  ======================================
+-->
+<section aria-labelledby="ab-title" class="ab-hero lx-b-center">
+<div class="ab-shell ab-hero-grid">
+<div class="ab-hero-copy" data-ab-reveal="">
+
+<span class="ab-eyebrow">
+<i aria-hidden="true" class="bi bi-flower1">
+</i>
+       THE DAILYKART STORY
+      </span>
+<h1 id="ab-title">
+       Good food.
+       <br/>
+<em>
+        Good days.
+       </em>
+<br/>
+       Every day.
+      </h1>
+<p>
+       Fresh produce, pantry staples and everyday essentials—thoughtfully brought together to make your grocery routine feel a little lighter.
+      </p>
+<div class="ab-actions">
+<a class="ab-button" href="products.html">
+        Explore Groceries
+        <i aria-hidden="true" class="bi bi-arrow-up-right">
+</i>
+</a>
+<a class="ab-text-link" href="#ab-story">
+        Get to know us
+        <i aria-hidden="true" class="bi bi-arrow-down">
+</i>
+</a>
+</div>
+<div class="ab-hero-note">
+<i aria-hidden="true" class="bi bi-heart">
+</i>
+<span>
+        Fresh essentials. Happier days.
+       </span>
+</div>
+</div>
+</div>
+</section>
+<!--
+  ======================================
+  SECTION 2: OUR STORY
+  ======================================
+-->
+<section aria-labelledby="ab-story-title" class="ab-intro" id="ab-story">
+<div class="ab-shell ab-intro-grid">
+<div class="ab-intro-visual" data-ab-reveal="">
+<div class="ab-intro-photo">
+<img alt="Grocery basket with everyday food essentials" loading="lazy" src="images/OUR STORY.png"/>
+</div>
+<div class="ab-intro-caption">
+<i aria-hidden="true" class="bi bi-flower1">
+</i>
+       A little more joy in every basket
+      </div>
+</div>
+<div class="ab-intro-copy" data-ab-reveal="">
+<span class="ab-eyebrow">
+<i aria-hidden="true" class="bi bi-bookmark-heart">
+</i>
+       WHO WE ARE
+      </span>
+<h2 id="ab-story-title">
+       A neighbourhood feeling,
+       <span>
+        wherever you shop.
+       </span>
+</h2>
+<p>
+       DailyKart is built around a simple idea: everyday grocery shopping should feel easy, welcoming and inspiring. From fresh ingredients to household favourites, we want the essentials to be easy to find.
+      </p>
+<p>
+       We believe the small moments matter—the fruit you add to breakfast, the ingredients for a family meal, and the little things that make a house feel like home.
+      </p>
+<a class="ab-inline-link" href="contact.html">
+       Say hello to our team
+       <i aria-hidden="true" class="bi bi-arrow-right">
+</i>
+</a>
+</div>
+</div>
+</section>
+<!--
+  ======================================
+  SECTION 3: MISSION AND VISION
+  ======================================
+-->
+<section aria-labelledby="ab-purpose-title" class="ab-purpose" id="ab-purpose">
+<div class="ab-shell">
+<div class="ab-section-head" data-ab-reveal="">
+<span class="ab-eyebrow">
+<i aria-hidden="true" class="bi bi-compass">
+</i>
+       WHAT DRIVES US
+      </span>
+<h2 id="ab-purpose-title">
+       Simple ideas.
+       <span>
+        Meaningful impact.
+       </span>
+</h2>
+<p>
+       Everything starts with making everyday shopping a little better.
+      </p>
+</div>
+<div class="ab-purpose-grid">
+<article class="ab-purpose-card" data-ab-reveal="">
+<span class="ab-purpose-index">
+        01 / OUR MISSION
+       </span>
+<div class="ab-purpose-icon">
+<i aria-hidden="true" class="bi bi-bag-heart">
+</i>
+</div>
+<h3>
+        Make daily shopping effortless.
+       </h3>
+<p>
+        Bring fresh groceries and trusted everyday categories together in a simple, friendly shopping experience.
+       </p>
+<span aria-hidden="true" class="ab-purpose-line">
+</span>
+</article>
+<article class="ab-purpose-card ab-purpose-card-alt" data-ab-reveal="">
+<span class="ab-purpose-index">
+        02 / OUR VISION
+       </span>
+<div class="ab-purpose-icon">
+<i aria-hidden="true" class="bi bi-sun">
+</i>
+</div>
+<h3>
+        Make room for happier days.
+       </h3>
+<p>
+        Help more households spend less time searching for essentials and more time enjoying the moments that matter.
+       </p>
+<span aria-hidden="true" class="ab-purpose-line">
+</span>
+</article>
+</div>
+</div>
+</section>
+<!--
+  ======================================
+  SECTION 4: OUR VALUES
+  ======================================
+-->
+<section aria-labelledby="ab-values-title" class="ab-values" id="ab-values">
+<div class="ab-shell">
+<div class="ab-values-top" data-ab-reveal="">
+<div>
+<span class="ab-eyebrow">
+<i aria-hidden="true" class="bi bi-heart">
+</i>
+        THE DAILYKART WAY
+       </span>
+<h2 id="ab-values-title">
+        The little things
+        <span>
+         we care about.
+        </span>
+</h2>
+</div>
+<p>
+       Our approach to grocery shopping is shaped by four everyday priorities.
+      </p>
+</div>
+<div class="ab-values-grid">
+<article class="ab-value" data-ab-reveal="">
+<span class="ab-value-number">
+        01
+       </span>
+<i aria-hidden="true" class="bi bi-flower1">
+</i>
+<h3>
+        Fresh choices
+       </h3>
+<p>
+        A colourful range of fruits, vegetables and everyday ingredients.
+       </p>
+</article>
+<article class="ab-value" data-ab-reveal="">
+<span class="ab-value-number">
+        02
+       </span>
+<i aria-hidden="true" class="bi bi-grid-1x2">
+</i>
+<h3>
+        Easy discovery
+       </h3>
+<p>
+        Clear categories that help you find what you need with less effort.
+       </p>
+</article>
+<article class="ab-value" data-ab-reveal="">
+<span class="ab-value-number">
+        03
+       </span>
+<i aria-hidden="true" class="bi bi-basket2">
+</i>
+<h3>
+        Everyday variety
+       </h3>
+<p>
+        From breakfast basics to pantry favourites and household needs.
+       </p>
+</article>
+<article class="ab-value" data-ab-reveal="">
+<span class="ab-value-number">
+        04
+       </span>
+<i aria-hidden="true" class="bi bi-chat-heart">
+</i>
+<h3>
+        A human touch
+       </h3>
+<p>
+        A friendly, approachable shopping experience from start to finish.
+       </p>
+</article>
+</div>
+</div>
+</section>
+<!--
+  ======================================
+  SECTION 5: SHOPPING EXPERIENCE
+  ======================================
+-->
+<section aria-labelledby="ab-experience-title" class="ab-experience" id="ab-experience">
+<div class="ab-shell ab-experience-grid">
+<div class="ab-experience-copy" data-ab-reveal="">
+<span class="ab-eyebrow">
+<i aria-hidden="true" class="bi bi-stars">
+</i>
+       THE EXPERIENCE
+      </span>
+<h2 id="ab-experience-title">
+       From your list to
+       <span>
+        your kitchen.
+       </span>
+</h2>
+<p>
+       Whether you're planning the week or picking up a few favourites, DailyKart is designed around the way real households shop.
+      </p>
+<div class="ab-experience-list">
+<div>
+<span>
+         01
+        </span>
+<div>
+<h3>
+          Browse your favourites
+         </h3>
+<p>
+          Explore fresh produce, dairy, pantry staples and more.
+         </p>
+</div>
+</div>
+<div>
+<span>
+         02
+        </span>
+<div>
+<h3>
+          Fill your basket
+         </h3>
+<p>
+          Choose the products that suit your routine.
+         </p>
+</div>
+</div>
+<div>
+<span>
+         03
+        </span>
+<div>
+<h3>
+          Keep your day moving
+         </h3>
+<p>
+          Enjoy a straightforward path from browsing to checkout.
+         </p>
+</div>
+</div>
+</div>
+<a class="ab-button" href="products.html">
+       Start Shopping
+       <i aria-hidden="true" class="bi bi-arrow-right">
+</i>
+</a>
+</div>
+<div class="ab-experience-art" data-ab-reveal="">
+<div class="ab-experience-main">
+<img alt="Grocery shopping basket" loading="lazy" src="images/shopping.png"/>
+</div>
+<div class="ab-experience-mini">
+<img alt="Fresh fruit selection" loading="lazy" src="images/fruit selection.png"/>
+</div>
+<span class="ab-experience-badge">
+<i aria-hidden="true" class="bi bi-check2-circle">
+</i>
+       Your everyday essentials
+      </span>
+</div>
+</div>
+</section>
+<!--
+  ======================================
+  SECTION 6: FREQUENTLY ASKED QUESTIONS
+  ======================================
+-->
+<section aria-labelledby="ab-faq-title" class="ab-faq" id="ab-faq">
+<div class="ab-shell ab-faq-grid">
+<!-- Left: distinct dark-plum FAQ introduction panel -->
+<div class="ab-faq-intro" data-ab-reveal="">
+<span class="ab-faq-kicker"><i aria-hidden="true" class="bi bi-chat-dots"></i> HERE TO HELP</span>
+<h2 id="ab-faq-title">Questions? <span>We've got answers.</span></h2>
+<p>Everything you need to know about exploring DailyKart, in one easy place.</p>
+<div class="ab-faq-support">
+<span class="ab-faq-support-icon"><i aria-hidden="true" class="bi bi-headset"></i></span>
+<div><strong>Still need help?</strong><span>Our contact page is just a click away.</span></div>
+</div>
+<a class="ab-faq-contact" href="contact.html">Contact Us <i aria-hidden="true" class="bi bi-arrow-up-right"></i></a>
+</div>
+<!-- Right: numbered, rounded accordion cards -->
+<div class="ab-faq-list" data-ab-reveal="">
+<details open="">
+<summary><span class="ab-faq-number">01</span><span class="ab-faq-question">What can I shop for on DailyKart?</span><span class="ab-faq-toggle"><i aria-hidden="true" class="bi bi-plus-lg"></i></span></summary>
+<div class="ab-faq-answer"><p>Explore everyday grocery categories including fresh fruits, vegetables, dairy, bakery items, pantry essentials and beverages.</p></div>
+</details>
+<details>
+<summary><span class="ab-faq-number">02</span><span class="ab-faq-question">How do I get started?</span><span class="ab-faq-toggle"><i aria-hidden="true" class="bi bi-plus-lg"></i></span></summary>
+<div class="ab-faq-answer"><p>Visit the Products page, browse the categories and choose the essentials you'd like to add to your basket.</p></div>
+</details>
+<details>
+<summary><span class="ab-faq-number">03</span><span class="ab-faq-question">Where can I find current offers?</span><span class="ab-faq-toggle"><i aria-hidden="true" class="bi bi-plus-lg"></i></span></summary>
+<div class="ab-faq-answer"><p>Head to the Offers page to explore the promotions currently displayed on DailyKart.</p></div>
+</details>
+<details>
+<summary><span class="ab-faq-number">04</span><span class="ab-faq-question">How can I contact DailyKart?</span><span class="ab-faq-toggle"><i aria-hidden="true" class="bi bi-plus-lg"></i></span></summary>
+<div class="ab-faq-answer"><p>You can reach out using the Contact page. We'd love to hear from you.</p></div>
+</details>
+</div>
+</div>
+</section>
+<!--
+  ======================================
+  SECTION 7: FINAL CALL TO ACTION
+  ======================================
+-->
+<section aria-labelledby="ab-cta-title" class="ab-cta">
+<div class="ab-shell">
+<div class="ab-cta-panel lx-c-center" data-ab-reveal="">
+<div class="ab-cta-copy">
+<span class="ab-eyebrow">
+<i aria-hidden="true" class="bi bi-bag-heart">
+</i>
+        YOUR NEXT BASKET STARTS HERE
+       </span>
+<h2 id="ab-cta-title">
+        A fresher way to
+        <span>
+         shop every day.
+        </span>
+</h2>
+<p>
+        Find your favourites, explore something new and make room for the good stuff.
+       </p>
+<div class="ab-actions">
+<a class="ab-button" href="products.html">
+         Shop Groceries
+         <i aria-hidden="true" class="bi bi-arrow-up-right">
+</i>
+</a>
+<a class="ab-text-link" href="contact.html">
+         Get in touch
+         <i aria-hidden="true" class="bi bi-arrow-right">
+</i>
+</a>
+</div>
+</div>
+<div class="ab-cta-image">
+<img alt="A selection of fresh groceries" loading="lazy" src="images/newsletter-groceries.png"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="dk-footer">
+
+ 
+
+  <!-- MAIN FOOTER -->
+  <div class="dk-footer-main">
+    <div class="dk-footer-container">
+
+      <!-- BRAND -->
+      <div class="dk-footer-col dk-footer-about">
+
+        <a href="index.html" class="dk-footer-brand">
+          <img
+            src="images/logo.png"
+            alt=""
+            class="dk-footer-logo"
+          >
+
+          <div class="dk-footer-brand-content">
+            <span class="dk-footer-brand-name">
+              Daily<span>Kart</span>
+              <i class="bi bi-flower1"></i>
+            </span>
+
+            <span class="dk-footer-tagline">
+              FRESH ESSENTIALS ✿ HAPPIER DAYS
+            </span>
+          </div>
+        </a>
+
+        <p class="dk-footer-description">
+          Bringing freshness, quality and convenience
+          to your everyday shopping. From farm-fresh
+          produce to household essentials, find
+          everything you love at DailyKart.
+        </p>
+
+        <div class="dk-footer-social">
+          <a
+            href="https://www.instagram.com/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a
+            href="https://www.pinterest.com/"
+            aria-label="Pinterest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-pinterest"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Explore</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Shop Products</a></li>
+          <li><a href="offers.html">Special Offers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Shop Categories</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="products.html?cat=fruits#shop">Fruits & Vegetables</a></li>
+          <li><a href="products.html?cat=dairy#shop">Dairy & Eggs</a></li>
+          <li><a href="products.html?cat=bakery#shop">Bakery & Snacks</a></li>
+          <li><a href="products.html?cat=pantry#shop">Rice, Atta & Pulses</a></li>
+          <li><a href="products.html?cat=beverages#shop">Beverages</a></li>
+          <li><a href="products.html?cat=pantry#shop">Household Essentials</a></li>
+        </ul>
+      </div>
+
+      <!-- CUSTOMER SUPPORT -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Customer Care</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="contact.html#contact-form">Help & Support</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="delivery-info.html">Shipping Information</a></li>
+          <li><a href="delivery-info.html">Returns & Refunds</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="dk-footer-col dk-footer-contact">
+        <h3 class="dk-footer-title">Get in Touch</h3>
+
+        <p>
+          Have a question? We're here to help
+          make your shopping experience better.
+        </p>
+
+        <a href="mailto:hello@example.com" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-envelope"></i>
+          </span>
+
+          <span>hello@example.com</span>
+        </a>
+
+        <a href="contact.html#contact-form" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-chat-dots"></i>
+          </span>
+
+          <span>Contact our support team</span>
+        </a>
+
+        <div class="dk-footer-promise">
+          <i class="bi bi-heart-fill"></i>
+          Freshness in Every Cart
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRUST STRIP -->
+
+
+  <!-- COPYRIGHT -->
+  <div class="dk-footer-bottom">
+    <div class="dk-footer-bottom-inner">
+
+      <p>
+        © <span id="dkFooterYear">2026</span>
+        <strong>DailyKart</strong>.
+        All rights reserved.
+      </p>
+
+  
+
+      <div class="dk-footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <span aria-hidden="true">•</span>
+        <a href="terms.html">Terms</a>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+
+
+  <!-- PAGE CONTENT GOES HERE -->
+   <script src="about.js" defer></script>
+  <script src="nav.js" defer></script>
+   <script src="footer.js" defer></script>
+</body>
+</html>

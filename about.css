@@ -1,0 +1,1251 @@
+/* DailyKart About — editorial redesign; uses existing nav.css tokens */
+.ab-hero,.ab-intro,.ab-purpose,.ab-values,.ab-experience,.ab-faq,.ab-cta {
+    position:relative;
+    overflow:hidden;
+    font-family:var(--font-family)
+}
+
+.ab-shell {
+    width:min(1320px,90%);
+    margin-inline:auto
+}
+
+.ab-eyebrow {
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    padding:9px 15px;
+    border-radius:50px;
+    background:var(--soft);
+    color:var(--pink);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.035em
+}
+
+.ab-eyebrow i {
+    font-size:14px
+}
+
+.ab-shell h1,.ab-shell h2,.ab-shell h3 {
+    color:var(--text)
+}
+
+.ab-shell h2 {
+    font-size:clamp(28px,3.2vw,45px);
+    line-height:1.19;
+    letter-spacing:-1.5px;
+    font-weight:800
+}
+
+.ab-shell h2 span,.ab-shell h1 em {
+    color:var(--pink);
+    font-style:normal
+}
+
+.ab-shell p {
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.95
+}
+
+.ab-button {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    min-height:54px;
+    padding:13px 25px;
+    border-radius:50px;
+    background:linear-gradient(110deg,#f32f82,#fa659c);
+    color:white;
+    font-size:12px;
+    font-weight:700;
+    box-shadow:0 12px 25px rgba(237,77,145,.25);
+    transition:transform .25s,box-shadow .25s
+}
+
+.ab-button:hover {
+    color:#fff;
+    transform:translateY(-4px);
+    box-shadow:0 18px 35px rgba(237,77,145,.3)
+}
+
+.ab-text-link,.ab-inline-link {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size:12px;
+    font-weight:700;
+    color:var(--text)
+}
+
+.ab-text-link:hover,.ab-inline-link:hover {
+    color:var(--pink)
+}
+
+.ab-actions {
+    display:flex;
+    align-items:center;
+    gap:26px;
+    flex-wrap:wrap
+}
+
+/* ======================================
+   SECTION 1: ABOUT HERO
+====================================== */
+.ab-hero {
+    background:radial-gradient(circle at 95% 20%,#ffdae9 0,transparent 36%),linear-gradient(125deg,var(--bg),var(--surface));
+    padding:45px 0 95px
+}
+
+.ab-hero-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:6%;
+    min-height:565px
+}
+
+.ab-breadcrumb {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:45px;
+    color:var(--muted);
+    font-size:11px
+}
+
+.ab-breadcrumb a:hover {
+    color:var(--pink)
+}
+
+.ab-breadcrumb i {
+    font-size:10px
+}
+
+.ab-hero-copy h1 {
+    font-size:clamp(48px,5.5vw,78px);
+    line-height:1.07;
+    letter-spacing:-3px;
+    font-weight:800;
+    margin:22px 0
+}
+
+.ab-hero-copy>p {
+    max-width:520px;
+    margin:0 0 30px;
+    font-size:14px
+}
+
+.ab-hero-note {
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:50px;
+    font-size:11px;
+    font-weight:600;
+    color:var(--muted)
+}
+
+.ab-hero-note i {
+    color:var(--pink);
+    font-size:20px
+}
+
+.ab-hero-art {
+    position:relative;
+    display:grid;
+    place-items:center;
+    min-height:530px
+}
+
+.ab-hero-art:before {
+    content:"";
+    position:absolute;
+    width:94%;
+    aspect-ratio:1;
+    border-radius:48% 52% 35% 65%;
+    background:#fbd7e6;
+    transform:rotate(-12deg)
+}
+
+.ab-hero-photo {
+    position:relative;
+    z-index:1;
+    width:90%;
+    height:475px;
+    overflow:hidden;
+    border-radius:220px 220px 36px 36px;
+    background:#f9c7db;
+    box-shadow:0 25px 55px #6d34552b
+}
+
+.ab-hero-photo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .8s
+}
+
+.ab-hero-art:hover img {
+    transform:scale(1.06)
+}
+
+.ab-hero-seal {
+    position:absolute;
+    z-index:2;
+    bottom:30px;
+    left:-25px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px 20px;
+    border-radius:20px;
+    background:var(--panel);
+    color:var(--text);
+    box-shadow:0 15px 35px #6d34552b;
+    font-size:12px;
+    line-height:1.5;
+    animation:ab-float 4s ease-in-out infinite
+}
+
+.ab-hero-seal i {
+    display:grid;
+    place-items:center;
+    width:45px;
+    height:45px;
+    border-radius:15px;
+    background:var(--soft);
+    color:var(--pink);
+    font-size:22px
+}
+
+.ab-hero-orbit {
+    position:absolute;
+    top:35px;
+    right:0;
+    width:22px;
+    height:22px;
+    border:5px solid var(--pink);
+    border-radius:50%
+}
+
+/* ======================================
+   SECTION 2: OUR STORY
+====================================== */
+.ab-intro {
+    padding:105px 0;
+    background:var(--panel)
+}
+
+.ab-intro-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9%;
+    align-items:center
+}
+
+.ab-intro-visual {
+    position:relative;
+    max-width:550px;
+    padding:0 28px 30px 0
+}
+
+.ab-intro-visual:before {
+    content:"";
+    position:absolute;
+    inset:32px 0 0 40px;
+    background:var(--soft);
+    border-radius:36px 160px 36px 120px
+}
+
+.ab-intro-photo {
+    position:relative;
+    height:470px;
+    overflow:hidden;
+    border-radius:36px 160px 36px 120px;
+    background:#ffe2ec
+}
+
+.ab-intro-photo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .7s
+}
+
+.ab-intro-visual:hover img {
+    transform:scale(1.05)
+}
+
+.ab-intro-caption {
+    position:absolute;
+    bottom:6px;
+    right:0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 20px;
+    border-radius:18px;
+    background:var(--panel);
+    box-shadow:0 10px 35px #5b28401a;
+    color:var(--text);
+    font-size:12px;
+    font-weight:700
+}
+
+.ab-intro-caption i {
+    font-size:20px;
+    color:var(--pink)
+}
+
+.ab-intro-copy h2 {
+    max-width:560px;
+    margin:22px 0
+}
+
+.ab-intro-copy p {
+    max-width:560px;
+    margin-bottom:15px
+}
+
+.ab-inline-link {
+    margin-top:16px;
+    color:var(--pink)
+}
+
+/* ======================================
+   SECTION 3: MISSION AND VISION
+====================================== */
+.ab-purpose {
+    padding:100px 0;
+    background:var(--surface)
+}
+
+.ab-section-head {
+    text-align:center;
+    max-width:680px;
+    margin:0 auto 40px
+}
+
+.ab-section-head h2 {
+    margin:19px 0 12px
+}
+
+.ab-purpose-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px
+}
+
+.ab-purpose-card {
+    position:relative;
+    min-height:330px;
+    padding:38px 42px;
+    border:1px solid var(--border);
+    border-radius:28px;
+    background:var(--panel);
+    overflow:hidden;
+    transition:transform .3s,box-shadow .3s
+}
+
+.ab-purpose-card:hover {
+    transform:translateY(-7px);
+    box-shadow:0 18px 45px #5b28401a
+}
+
+.ab-purpose-card-alt {
+    background:linear-gradient(130deg,#ffe4ef,#fff5fa)
+}
+
+.ab-purpose-index {
+    font-size:10px;
+    letter-spacing:.15em;
+    color:var(--pink);
+    font-weight:800
+}
+
+.ab-purpose-icon {
+    display:grid;
+    place-items:center;
+    width:66px;
+    height:66px;
+    margin:22px 0;
+    border-radius:20px;
+    background:var(--soft);
+    color:var(--pink);
+    font-size:28px
+}
+
+.ab-purpose-card h3 {
+    max-width:420px;
+    font-size:23px;
+    letter-spacing:-.6px;
+    margin:0 0 10px
+}
+
+.ab-purpose-card p {
+    max-width:460px
+}
+
+.ab-purpose-line {
+    position:absolute;
+    right:-30px;
+    bottom:-70px;
+    width:220px;
+    height:220px;
+    border:25px solid #f5a6c638;
+    border-radius:50%
+}
+
+/* ======================================
+   SECTION 4: OUR VALUES
+====================================== */
+.ab-values {
+    padding:105px 0;
+    background:var(--panel)
+}
+
+.ab-values-top {
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:40px;
+    margin-bottom:35px
+}
+
+.ab-values-top h2 {
+    margin:19px 0 0
+}
+
+.ab-values-top>p {
+    max-width:300px;
+    margin:0
+}
+
+.ab-values-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px
+}
+
+.ab-value {
+    position:relative;
+    padding:30px 24px;
+    min-height:245px;
+    border:1px solid var(--border);
+    border-radius:23px;
+    background:var(--surface);
+    transition:transform .3s,border-color .3s
+}
+
+.ab-value:hover {
+    transform:translateY(-7px);
+    border-color:var(--pink)
+}
+
+.ab-value-number {
+    display:block;
+    text-align:right;
+    color:var(--muted);
+    font-size:11px
+}
+
+.ab-value>i {
+    display:grid;
+    place-items:center;
+    width:58px;
+    height:58px;
+    margin:4px 0 26px;
+    border-radius:17px;
+    background:var(--soft);
+    color:var(--pink);
+    font-size:26px
+}
+
+.ab-value h3 {
+    font-size:17px;
+    margin:0 0 9px
+}
+
+.ab-value p {
+    font-size:12px;
+    margin:0
+}
+
+/* ======================================
+   SECTION 5: SHOPPING EXPERIENCE
+====================================== */
+.ab-experience {
+    padding:100px 0;
+    background:var(--surface)
+}
+
+.ab-experience-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8%;
+    align-items:center
+}
+
+.ab-experience-copy h2 {
+    margin:20px 0
+}
+
+.ab-experience-copy>p {
+    max-width:530px
+}
+
+.ab-experience-list {
+    margin:30px 0
+}
+
+.ab-experience-list>div {
+    display:flex;
+    gap:20px;
+    padding:16px 0;
+    border-bottom:1px solid var(--border)
+}
+
+.ab-experience-list>div>span {
+    font-size:13px;
+    color:var(--pink);
+    font-weight:800
+}
+
+.ab-experience-list h3 {
+    font-size:15px;
+    margin:0 0 4px
+}
+
+.ab-experience-list p {
+    font-size:12px;
+    margin:0
+}
+
+.ab-experience-art {
+    position:relative;
+    min-height:500px;
+    display:grid;
+    place-items:center
+}
+
+.ab-experience-art:before {
+    content:"";
+    position:absolute;
+    inset:30px 20px 25px 50px;
+    border-radius:48% 52% 50% 40%;
+    background:var(--soft)
+}
+
+.ab-experience-main {
+    position:relative;
+    width:82%;
+    height:440px;
+    border-radius:180px 35px 35px 35px;
+    overflow:hidden;
+    background:#f8d6e4;
+    box-shadow:0 25px 55px #5b28401c
+}
+
+.ab-experience-main img {
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+
+.ab-experience-mini {
+    position:absolute;
+    bottom:20px;
+    left:-12px;
+    width:150px;
+    height:150px;
+    border:8px solid var(--panel);
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 10px 35px #5b284029
+}
+
+.ab-experience-mini img {
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+
+.ab-experience-badge {
+    position:absolute;
+    top:55px;
+    right:-10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 17px;
+    background:var(--panel);
+    color:var(--text);
+    font-size:11px;
+    font-weight:700;
+    border-radius:30px;
+    box-shadow:0 12px 35px #5b28401a
+}
+
+.ab-experience-badge i {
+    color:var(--pink);
+    font-size:17px
+}
+
+/* ======================================
+   SECTION 6: FAQ - NEW SPLIT DESIGN
+   Left: dark introduction panel
+   Right: numbered accordion cards
+====================================== */
+.ab-faq {
+    padding: 100px 0;
+    background: var(--panel, #ffffff);
+}
+
+.ab-faq-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: 48px;
+}
+
+/* Left panel */
+.ab-faq-intro {
+    position: relative;
+    padding: 48px 42px;
+    border-radius: 30px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #471c48, #27152f);
+    color: #fff;
+}
+
+.ab-faq-intro::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: -90px;
+    width: 230px;
+    height: 230px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ab-faq-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 14px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffd1e6;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.ab-faq-intro h2 {
+    margin: 24px 0 16px;
+    color: #fff;
+    font-size: clamp(29px, 3vw, 43px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.ab-faq-intro h2 span {
+    color: #ff8cba;
+}
+
+.ab-faq-intro > p {
+    margin: 0 0 30px;
+    color: #e1d2e3;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.ab-faq-support {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.ab-faq-support-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ff9bc5;
+    font-size: 21px;
+}
+
+.ab-faq-support strong,
+.ab-faq-support div > span {
+    display: block;
+}
+
+.ab-faq-support strong {
+    margin-bottom: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.ab-faq-support div > span {
+    color: #e1d2e3;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.ab-faq-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 100px;
+    background: linear-gradient(110deg, #f32f82, #fa659c);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease;
+}
+
+.ab-faq-contact:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Right accordion cards */
+.ab-faq-list {
+    display: grid;
+    gap: 14px;
+}
+
+.ab-faq-list details {
+    overflow: hidden;
+    border: 1px solid var(--border, #f1dce6);
+    border-radius: 20px;
+    background: var(--bg, #fff);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ab-faq-list details[open] {
+    border-color: #f3a8c9;
+    box-shadow: 0 14px 30px rgba(151, 59, 106, 0.08);
+}
+
+.ab-faq-list summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 23px 22px;
+    cursor: pointer;
+    list-style: none;
+    color: var(--text, #391139);
+}
+
+.ab-faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.ab-faq-number {
+    flex: 0 0 35px;
+    color: var(--pink, #f32f82);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.ab-faq-question {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.ab-faq-toggle {
+    display: grid;
+    place-items: center;
+    flex: 0 0 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--soft, #fff0f7);
+    color: var(--pink, #f32f82);
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.ab-faq-toggle i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.ab-faq-list details[open] .ab-faq-toggle {
+    background: #f32f82;
+    color: #fff;
+}
+
+.ab-faq-list details[open] .ab-faq-toggle i {
+    transform: rotate(45deg);
+}
+
+.ab-faq-answer {
+    padding: 0 28px 24px 72px;
+}
+
+.ab-faq-answer p {
+    margin: 0;
+    color: var(--muted, #71677c);
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+.ab-faq-list summary:focus-visible,
+.ab-faq-contact:focus-visible {
+    outline: 2px solid #f32f82;
+    outline-offset: 4px;
+}
+
+/* Dark mode */
+body.dark .ab-faq {
+    background: var(--panel, #21182b);
+}
+
+body.dark .ab-faq-list details {
+    background: var(--bg, #302237);
+    border-color: var(--border, #60466f);
+}
+
+body.dark .ab-faq-list details[open] {
+    border-color: #e968a1;
+}
+
+body.dark .ab-faq-question {
+    color: var(--text, #fff5fc);
+}
+
+body.dark .ab-faq-answer p {
+    color: var(--muted, #c5b7ca);
+}
+
+body.dark .ab-faq-toggle {
+    background: #503462;
+    color: #ff8cba;
+}
+
+body.dark .ab-faq-list details[open] .ab-faq-toggle {
+    background: #f32f82;
+    color: #fff;
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+    .ab-faq-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .ab-faq-intro {
+        padding: 36px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ab-faq {
+        padding: 65px 0;
+    }
+
+    .ab-faq-intro {
+        padding: 30px 24px;
+        border-radius: 23px;
+    }
+
+    .ab-faq-intro h2 {
+        font-size: 30px;
+    }
+
+    .ab-faq-list summary {
+        gap: 10px;
+        padding: 18px 14px;
+    }
+
+    .ab-faq-number {
+        flex-basis: 27px;
+        font-size: 11px;
+    }
+
+    .ab-faq-question {
+        font-size: 12px;
+    }
+
+    .ab-faq-toggle {
+        flex-basis: 32px;
+        height: 32px;
+    }
+
+    .ab-faq-answer {
+        padding: 0 18px 20px 51px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ab-faq-list details,
+    .ab-faq-toggle,
+    .ab-faq-toggle i,
+    .ab-faq-contact {
+        transition: none;
+    }
+}
+
+/* ======================================
+   SECTION 7: CLOSING CTA
+====================================== */
+.ab-cta {
+    padding:25px 0 100px;
+    background:var(--panel)
+}
+
+.ab-cta-panel {
+    position:relative;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:30px;
+    min-height:340px;
+    padding:55px 65px;
+    border-radius:32px;
+    background:linear-gradient(115deg,#fff0f7,#ffd9e9);
+    overflow:hidden
+}
+
+.ab-cta-copy {
+    position:relative;
+    z-index:1
+}
+
+.ab-cta-copy h2 {
+    max-width:550px;
+    margin:20px 0 12px
+}
+
+.ab-cta-copy p {
+    max-width:500px;
+    margin-bottom:25px;
+    color:#74566e
+}
+
+.ab-cta-image {
+    position:relative;
+    z-index:0;
+    height:300px;
+    display:grid;
+    place-items:center
+}
+
+.ab-cta-image img {
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    filter:drop-shadow(0 18px 22px #91396030)
+}
+
+.ab-cta .ab-text-link {
+    color:#56394f
+}
+
+/* ======================================
+   DARK MODE
+====================================== */
+body.dark .ab-hero {
+    background:radial-gradient(circle at 95% 20%,#503462 0,transparent 40%),var(--bg)
+}
+
+body.dark .ab-hero-art:before,body.dark .ab-purpose-card-alt,body.dark .ab-cta-panel {
+    background:linear-gradient(125deg,#493158,#382748)
+}
+
+body.dark .ab-hero-photo,body.dark .ab-intro-photo,body.dark .ab-experience-main {
+    background:#493158
+}
+
+body.dark .ab-cta-copy p {
+    color:var(--muted)
+}
+
+body.dark .ab-cta .ab-text-link {
+    color:var(--text)
+}
+
+/* ======================================
+   SCROLL ANIMATIONS
+====================================== */
+@keyframes ab-float {
+    0%,100% {
+        transform:translateY(0)
+    }
+
+    50% {
+        transform:translateY(-10px)
+    }
+
+}
+
+.ab-motion [data-ab-reveal] {
+    opacity:0;
+    transform:translateY(32px);
+    transition:opacity .7s ease,transform .7s ease
+}
+
+.ab-motion [data-ab-reveal].ab-visible {
+    opacity:1;
+    transform:translateY(0)
+}
+
+/* ======================================
+   RESPONSIVE LAYOUTS
+====================================== */
+@media(max-width:1050px) {
+    .ab-hero-grid,.ab-intro-grid,.ab-experience-grid {
+        gap:5%
+    }
+
+    .ab-hero-copy h1 {
+        font-size:clamp(43px,5vw,65px)
+    }
+
+    .ab-hero-photo {
+        height:420px
+    }
+
+    .ab-hero-art {
+        min-height:460px
+    }
+
+    .ab-values-grid {
+        grid-template-columns:repeat(2,1fr)
+    }
+
+    .ab-intro-photo {
+        height:400px
+    }
+
+    .ab-experience-main {
+        height:380px
+    }
+
+    .ab-experience-art {
+        min-height:430px
+    }
+
+}
+
+@media(max-width:760px) {
+    .ab-shell {
+        width:min(100% - 36px,600px)
+    }
+
+    .ab-hero {
+        padding:25px 0 65px
+    }
+
+    .ab-hero-grid,.ab-intro-grid,.ab-experience-grid,.ab-faq-grid,.ab-cta-panel {
+        grid-template-columns:1fr
+    }
+
+    .ab-hero-grid {
+        gap:35px
+    }
+
+    .ab-breadcrumb {
+        margin-bottom:30px
+    }
+
+    .ab-hero-copy h1 {
+        font-size:clamp(42px,10vw,60px);
+        letter-spacing:-2px
+    }
+
+    .ab-hero-copy>p {
+        font-size:12px
+    }
+
+    .ab-hero-note {
+        margin-top:25px
+    }
+
+    .ab-hero-art {
+        min-height:340px
+    }
+
+    .ab-hero-photo {
+        height:340px;
+        width:85%
+    }
+
+    .ab-hero-seal {
+        left:0;
+        bottom:0
+    }
+
+    .ab-intro,.ab-purpose,.ab-values,.ab-experience,.ab-faq {
+        padding:70px 0
+    }
+
+    .ab-intro-grid,.ab-experience-grid {
+        gap:45px
+    }
+
+    .ab-intro-photo {
+        height:340px
+    }
+
+    .ab-purpose-grid {
+        grid-template-columns:1fr
+    }
+
+    .ab-purpose-card {
+        min-height:0;
+        padding:30px
+    }
+
+    .ab-values-top {
+        display:block
+    }
+
+    .ab-values-top>p {
+        margin-top:14px
+    }
+
+    .ab-experience-art {
+        min-height:370px
+    }
+
+    .ab-experience-main {
+        height:330px
+    }
+
+    .ab-experience-mini {
+        width:115px;
+        height:115px;
+        left:0
+    }
+
+    .ab-experience-badge {
+        right:0
+    }
+
+    .ab-faq-grid {
+        gap:20px
+    }
+
+    .ab-cta {
+        padding:0 0 70px
+    }
+
+    .ab-cta-panel {
+        padding:35px 25px;
+        gap:10px
+    }
+
+    .ab-cta-image {
+        height:210px
+    }
+
+    .ab-shell h2 {
+        font-size:clamp(28px,7vw,36px)
+    }
+
+    .ab-button {
+        min-height:42px;
+        padding:11px 18px;
+        font-size:11px
+    }
+
+}
+
+@media(max-width:420px) {
+    .ab-values-grid {
+        grid-template-columns:1fr
+    }
+
+    .ab-actions {
+        gap:18px
+    }
+
+    .ab-hero-photo {
+        height:285px
+    }
+
+    .ab-hero-art {
+        min-height:310px
+    }
+
+    .ab-intro-photo {
+        height:285px
+    }
+
+    .ab-experience-main {
+        height:290px
+    }
+
+    .ab-hero-seal {
+        padding:10px 12px
+    }
+
+    .ab-purpose-card h3 {
+        font-size:20px
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .ab-shell *, .ab-shell *::before,.ab-shell *::after {
+        animation:none!important;
+        transition:none!important
+    }
+
+    .ab-motion [data-ab-reveal] {
+        opacity:1;
+        transform:none
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT PAGE BANNER BACKGROUND */
+
+.ab-hero {
+  background-image:
+    linear-gradient(
+      rgba(255, 247, 251, 0.65),
+      rgba(255, 247, 251, 0.65)
+    ),
+    url("images/about-hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

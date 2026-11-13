@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DailyKart | Fresh Essentials, Happier Days</title>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+  
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="offers.css">
+  <link rel="stylesheet" href="layouts.css">
+  <!-- Main JS -->
+
+</head>
+
+<body>
+
+
+
+  <header class="header">
+
+    <div class="header-content">
+
+      <!-- BRAND -->
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="DailyKart Home"
+      >
+        <img
+          src="images/logo.png"
+          alt="DailyKart grocery cart"
+          class="brand-logo"
+        >
+
+        <div class="brand-details">
+          <div class="brand-name">
+            Daily<span>Kart</span>
+            <i
+              class="bi bi-flower1 brand-flower"
+              aria-hidden="true"
+            ></i>
+          </div>
+
+          <p class="brand-tagline">
+            FRESH ESSENTIALS
+            <span>✿</span>
+            HAPPIER DAYS
+          </p>
+        </div>
+      </a>
+
+      <!-- MAIN NAVIGATION -->
+      <nav
+        class="navigation"
+        id="navigation"
+        aria-label="Main navigation"
+      >
+
+        <!-- HOME DROPDOWN -->
+        <div class="dropdown" id="homeDropdown">
+
+          <button
+            type="button"
+            class="home-btn"
+            id="homeBtn"
+            aria-expanded="false"
+            aria-controls="homeMenu"
+          >
+            <span>Home</span>
+            <i
+              class="bi bi-chevron-down"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <div
+            class="dropdown-menu"
+            id="homeMenu"
+          >
+            <a href="index.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-door"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 1
+            </a>
+
+            <a href="home2.html">
+              <span class="dropdown-icon">
+                <i
+                  class="bi bi-house-heart"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              Home 2
+            </a>
+          </div>
+
+        </div>
+
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+          <a href="delivery-info.html">Delivery Info</a>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+
+      </nav>
+
+      <!-- HEADER ACTIONS -->
+      <div class="actions">
+
+        <!-- LIGHT / DARK -->
+        <button
+          type="button"
+          class="theme-btn"
+          id="themeBtn"
+          aria-label="Switch to dark mode"
+          title="Switch theme"
+        >
+          <i
+            class="bi bi-sun"
+            id="themeIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+        <!-- RTL / LTR -->
+        <button
+          type="button"
+          class="rtl-btn"
+          id="rtlBtn"
+          aria-label="Switch to RTL layout"
+        >
+        
+          <span id="rtlText">RTL</span>
+        </button>
+
+        <!-- LOGIN -->
+        <a href="login.html" class="login-btn">
+          <i
+            class="bi bi-person-fill"
+            aria-hidden="true"
+          ></i>
+          <span>Login</span>
+        </a>
+
+        <!-- MOBILE MENU -->
+        <button
+          type="button"
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <i
+            class="bi bi-list"
+            id="menuIcon"
+            aria-hidden="true"
+          ></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- DECORATIVE CORNERS -->
+    <div class="corner corner-left" aria-hidden="true"></div>
+    <div class="corner corner-right" aria-hidden="true"></div>
+
+  </header>
+
+
+
+
+
+
+
+
+
+<main class="dk-of" id="main">
+
+<!-- ==========================================
+     OFFERS - 1. BANNER
+========================================== -->
+<section class="dk-of-hero lx-b-trio" id="offers-hero">
+  <div class="dk-of-hero-main">
+
+    <div class="dk-of-hero-content">
+
+      
+
+      <span class="dk-of-label">
+        <i class="bi bi-stars"></i>
+        Limited Time Deals
+      </span>
+
+      <h1>
+        Big Savings, <span>Every Day!</span>
+      </h1>
+
+      <p class="dk-of-hero-text">
+        Fresh fruits, daily essentials and your favourite snacks at
+        prices you will love. Pick a deal, fill your basket and save
+        on every order.
+      </p>
+
+      <div class="dk-of-actions">
+        <a href="#deals" class="dk-of-hero-btn">
+          <i class="bi bi-lightning-charge"></i>
+          <span>Shop Today's Deals</span>
+          <i class="bi bi-arrow-right"></i>
+        </a>
+
+        <a href="#coupons" class="dk-of-hero-btn-outline">
+          <i class="bi bi-ticket-perforated"></i>
+          <span>Get Coupons</span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="dk-of-hero-visual">
+      <span class="dk-of-blob" aria-hidden="true"></span>
+      <img
+        src="images/best-prices.png"
+        alt="Pink discount tag with a percent sign"
+        class="dk-of-hero-image"
+      >
+
+      <div class="dk-of-chip dk-of-chip-one">
+        <i class="bi bi-tag"></i>
+        <div>
+          <strong>Up to 40% Off</strong>
+          <span>On selected items</span>
+        </div>
+      </div>
+
+      <div class="dk-of-chip dk-of-chip-two">
+        <i class="bi bi-basket3"></i>
+        <div>
+          <strong>Fresh Deals Daily</strong>
+          <span>New savings every day</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     OFFERS - 2. SPECIAL OFFERS
+========================================== -->
+<section class="dk-of-offers" id="special-offers">
+  <div class="dk-of-container">
+
+    <div class="dk-of-heading">
+      <span class="dk-of-label"><i class="bi bi-gift"></i> Special Offers</span>
+      <h2>Offers You <span>Will Love</span></h2>
+      <p>Great savings on your everyday essentials.</p>
+    </div>
+
+    <div class="dk-of-offers-layout">
+
+      <article class="dk-of-offer dk-of-offer-featured">
+        <span class="dk-of-ribbon">
+          <i class="bi bi-award-fill"></i>
+          Featured Offer
+        </span>
+        <h3>Fresh Fruits &amp;<br>Vegetables</h3>
+        <p>Farm-fresh goodness<br>at better prices.</p>
+        <a href="products.html?category=vegetables" class="dk-of-btn">
+          Shop Now
+          <i class="bi bi-arrow-right"></i>
+        </a>
+        <span class="dk-of-badge">
+          <small>Up to</small>
+          <strong>30%</strong>
+          <small>OFF</small>
+        </span>
+        <img src="images/offer-fruits.png" alt="Basket of fresh fruits and vegetables" loading="lazy">
+      </article>
+
+      <div class="dk-of-offers-side">
+
+        <article class="dk-of-offer dk-of-offer-lilac">
+          <h3>Daily Essentials</h3>
+          <p>All your household<br>needs in one place.</p>
+          <a href="products.html?category=pantry" class="dk-of-btn">
+            Shop Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <span class="dk-of-badge">
+            <small>Up to</small>
+            <strong>25%</strong>
+            <small>OFF</small>
+          </span>
+          <img src="images/offer-essentials.png" alt="Rice, pulses, cooking oil and milk" loading="lazy">
+        </article>
+
+        <article class="dk-of-offer dk-of-offer-peach">
+          <h3>Snacks &amp; Beverages</h3>
+          <p>Your favourite snacks<br>at tasty offers.</p>
+          <a href="products.html?category=beverages" class="dk-of-btn">
+            Shop Now
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <span class="dk-of-badge">
+            <small>Up to</small>
+            <strong>40%</strong>
+            <small>OFF</small>
+          </span>
+          <img src="images/offer-snacks.png" alt="Assorted snacks and beverages" loading="lazy">
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     OFFERS - 3. DEALS OF THE DAY
+========================================== -->
+<section class="dk-of-deals" id="deals">
+  <div class="dk-of-container">
+
+    <div class="dk-of-heading">
+      <span class="dk-of-label"><i class="bi bi-lightning-charge"></i> Deals of the Day</span>
+      <h2>Today's <span>Best Prices</span></h2>
+      <p>Our biggest discounts right now. Add them to your basket in one tap.</p>
+
+      <div class="dk-of-timer">
+        <i class="bi bi-alarm" aria-hidden="true"></i>
+        <span>Deals refresh in</span>
+        <span class="dk-of-timer-digits" id="ofTimer" role="timer" aria-live="off">
+          <b id="ofHours">00</b><i>:</i><b id="ofMinutes">00</b><i>:</i><b id="ofSeconds">00</b>
+        </span>
+      </div>
+    </div>
+
+    <div class="dk-of-grid" id="ofGrid"></div>
+
+    <div class="dk-of-more">
+      <a href="products.html" class="dk-of-btn-outline">
+        Browse All Products
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     OFFERS - 4. SHOP OFFERS BY CATEGORY
+========================================== -->
+<section class="dk-of-cats" id="offer-categories">
+  <div class="dk-of-container">
+
+    <div class="dk-of-heading">
+      <span class="dk-of-label"><i class="bi bi-grid"></i> Shop by Category</span>
+      <h2>Offers in Every <span>Aisle</span></h2>
+      <p>Choose a category and see everything on offer.</p>
+    </div>
+
+    <div class="dk-of-cats-grid" id="ofCats"></div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     OFFERS - 5. COUPONS
+========================================== -->
+<section class="dk-of-coupons" id="coupons">
+  <div class="dk-of-container">
+
+    <div class="dk-of-heading">
+      <span class="dk-of-label"><i class="bi bi-ticket-perforated"></i> Coupon Codes</span>
+      <h2>Save Even <span>More</span></h2>
+      <p>Copy a code and use it at checkout.</p>
+    </div>
+
+    <!-- SAMPLE CODES: replace the codes and amounts with your real ones -->
+    <div class="dk-of-coupons-grid">
+
+      <article class="dk-of-coupon">
+        <span class="dk-of-icon"><i class="bi bi-person-heart"></i></span>
+        <span class="dk-of-coupon-value">10% OFF</span>
+        <h3>Welcome Offer</h3>
+        <p>For your very first order with DailyKart.</p>
+        <div class="dk-of-code-row">
+          <code>WELCOME10</code>
+          <button type="button" class="dk-of-btn dk-of-copy" data-code="WELCOME10">
+            <i class="bi bi-copy"></i>
+            <span>Copy</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="dk-of-coupon">
+        <span class="dk-of-icon"><i class="bi bi-apple"></i></span>
+        <span class="dk-of-coupon-value">20% OFF</span>
+        <h3>Fresh Picks</h3>
+        <p>On selected fruits and vegetables.</p>
+        <div class="dk-of-code-row">
+          <code>FRESH20</code>
+          <button type="button" class="dk-of-btn dk-of-copy" data-code="FRESH20">
+            <i class="bi bi-copy"></i>
+            <span>Copy</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="dk-of-coupon">
+        <span class="dk-of-icon"><i class="bi bi-cash-coin"></i></span>
+        <span class="dk-of-coupon-value">&#8377;50 OFF</span>
+        <h3>Big Basket Saver</h3>
+        <p>On orders of &#8377;499 and above.</p>
+        <div class="dk-of-code-row">
+          <code>SAVE50</code>
+          <button type="button" class="dk-of-btn dk-of-copy" data-code="SAVE50">
+            <i class="bi bi-copy"></i>
+            <span>Copy</span>
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ==========================================
+     OFFERS - 6. CALL TO ACTION
+========================================== -->
+<section class="dk-of-cta" id="start-shopping">
+  <div class="dk-of-container">
+
+    <div class="dk-of-cta-banner lx-c-ticket">
+
+      <div class="dk-of-cta-content">
+
+        <span class="dk-of-label">
+          <i class="bi bi-basket3"></i>
+          Do Not Miss Out
+        </span>
+
+        <h2>Fill Your Basket, <span>Save More</span></h2>
+
+        <p>
+          Fresh groceries and daily essentials are waiting for you.
+          Pick your deals and enjoy great prices on every order.
+        </p>
+
+        <div class="dk-of-actions">
+          <a href="products.html" class="dk-of-btn">
+            <i class="bi bi-cart3"></i>
+            <span>Start Shopping</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+
+          <a href="contact.html" class="dk-of-btn-light">
+            <i class="bi bi-chat-dots"></i>
+            <span>Need Help?</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="dk-of-cta-visual">
+        <img
+          src="images/offer-cta.png"
+          alt="Basket full of fresh vegetables, fruits, bread and milk"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<div class="dk-of-toast" id="ofToast" role="status" aria-live="polite">
+  <i class="bi bi-check-circle-fill"></i>
+  <span id="ofToastText"></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="dk-footer">
+
+ 
+
+  <!-- MAIN FOOTER -->
+  <div class="dk-footer-main">
+    <div class="dk-footer-container">
+
+      <!-- BRAND -->
+      <div class="dk-footer-col dk-footer-about">
+
+        <a href="index.html" class="dk-footer-brand">
+          <img
+            src="images/logo.png"
+            alt=""
+            class="dk-footer-logo"
+          >
+
+          <div class="dk-footer-brand-content">
+            <span class="dk-footer-brand-name">
+              Daily<span>Kart</span>
+              <i class="bi bi-flower1"></i>
+            </span>
+
+            <span class="dk-footer-tagline">
+              FRESH ESSENTIALS ✿ HAPPIER DAYS
+            </span>
+          </div>
+        </a>
+
+        <p class="dk-footer-description">
+          Bringing freshness, quality and convenience
+          to your everyday shopping. From farm-fresh
+          produce to household essentials, find
+          everything you love at DailyKart.
+        </p>
+
+        <div class="dk-footer-social">
+          <a
+            href="https://www.instagram.com/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+
+          <a
+            href="https://www.youtube.com/"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-youtube"></i>
+          </a>
+
+          <a
+            href="https://www.pinterest.com/"
+            aria-label="Pinterest"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-pinterest"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Explore</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Shop Products</a></li>
+          <li><a href="offers.html">Special Offers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Shop Categories</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="products.html?cat=fruits#shop">Fruits & Vegetables</a></li>
+          <li><a href="products.html?cat=dairy#shop">Dairy & Eggs</a></li>
+          <li><a href="products.html?cat=bakery#shop">Bakery & Snacks</a></li>
+          <li><a href="products.html?cat=pantry#shop">Rice, Atta & Pulses</a></li>
+          <li><a href="products.html?cat=beverages#shop">Beverages</a></li>
+          <li><a href="products.html?cat=pantry#shop">Household Essentials</a></li>
+        </ul>
+      </div>
+
+      <!-- CUSTOMER SUPPORT -->
+      <div class="dk-footer-col">
+        <h3 class="dk-footer-title">Customer Care</h3>
+
+        <ul class="dk-footer-links">
+          <li><a href="contact.html#contact-form">Help & Support</a></li>
+          <li><a href="contact.html#faq">FAQs</a></li>
+          <li><a href="delivery-info.html">Shipping Information</a></li>
+          <li><a href="delivery-info.html">Returns & Refunds</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="dk-footer-col dk-footer-contact">
+        <h3 class="dk-footer-title">Get in Touch</h3>
+
+        <p>
+          Have a question? We're here to help
+          make your shopping experience better.
+        </p>
+
+        <a href="mailto:hello@example.com" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-envelope"></i>
+          </span>
+
+          <span>hello@example.com</span>
+        </a>
+
+        <a href="contact.html#contact-form" class="dk-contact-item">
+          <span class="dk-contact-icon">
+            <i class="bi bi-chat-dots"></i>
+          </span>
+
+          <span>Contact our support team</span>
+        </a>
+
+        <div class="dk-footer-promise">
+          <i class="bi bi-heart-fill"></i>
+          Freshness in Every Cart
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRUST STRIP -->
+
+
+  <!-- COPYRIGHT -->
+  <div class="dk-footer-bottom">
+    <div class="dk-footer-bottom-inner">
+
+      <p>
+        © <span id="dkFooterYear">2026</span>
+        <strong>DailyKart</strong>.
+        All rights reserved.
+      </p>
+
+  
+
+      <div class="dk-footer-legal">
+        <a href="privacy.html">Privacy</a>
+        <span aria-hidden="true">•</span>
+        <a href="terms.html">Terms</a>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+
+
+  <!-- PAGE CONTENT GOES HERE -->
+   <script src="offers.js" defer></script>
+  <script src="nav.js" defer></script>
+   <script src="footer.js" defer></script>
+</body>
+</html>
